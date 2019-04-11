@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+
+    <title>Neuro routes</title>
+
+    <meta name="description" content="A d3.js dashboard for data visualisation">
+
+    <!--jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+    <script src="lib/js/bootstrap.min.js"></script>
+
+    <!-- keen.io -->
+    <link rel="stylesheet" href="lib/css/keen-dashboards.css">
+    <script src="lib/js/keen.min.js"></script>
+
+    <!--d3 -->
+    <script src='https://d3js.org/d3.v4.min.js'></script>
+    <script src="lib/js/d3-delaunay.min.js"></script>
+
+    <!-- User scripts  -->
+    <script src='src/js/section.js'></script>
+
+    <link rel="stylesheet" href="src/css/index.css">
+
+
+</head>
+
+<body class="application" id="body">
+
+
+<!-- main page container, holding the nav tabs and content -->
+<div id="container">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Neuro crowds</a>
+                </div>
+            </div><!--/.container-fluid -->
+        </div>
+    </div>
+
+    <!-- content for the nav tabs -->
+    <div class="tab-content">
+
+        <!-- map content tab -->
+        <div class="tab-pane active fade in" id="map-content">
+            <div class="container-fluid">
+                <div class="row" style="margin-top:1px">
+                    <!--//top row-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-sm-12">
+                            <!-- Map -->
+                            <div class="col-sm-12">
+                                <div class="chart-wrapper">
+                                    <div class="chart-title">
+                                        Map
+                                    </div>
+                                    <div class="chart-stage">
+                                         <div id="mymap" style="width: 100%;">
+                                            <svg></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Map -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- tab-content -->
+
+    <script>
+        d3.csv("./src/data/DotTable.csv", function (data) {
+            data.forEach(function(d){
+                d.x = + d.x;
+                d.y = + d.y;
+                d.r = + d.r;
+                d.g = + d.g;
+                d.b = + d.b;
+                d.radius = + d.radius;
+            });
+            console.log('done')
+            sectionChart(data)
+        },);
+    </script>
+
+    <!--<hr>-->
+
+    <div id="footnote" style="margin-top:-3px;">
+        <p class="small text-muted" id="alignleft">University College London - <a href="http://www.ucl.ac.uk/cortexlab">Cortexlab</a>
+        </p>
+        <!--<p class="small text-muted" id="alignright">Best viewed with <img src="./dashboard/data/img/if_chrome_87865.png"-->
+                                                                          <!--class="chromeIcon" alt="Warning!"></p>-->
+    </div>
+
+
+</div>
+
+</body>
+
+</html>

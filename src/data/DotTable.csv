@@ -1,0 +1,500 @@
+x,y,r,g,b,radius,description
+-13.03464897,8.048922641,179,179,0,5,A.01.a. Nervous system patterning and developmental cell death
+-12.3385282,9.540342207,179,179,0,5,A.01.b. Proliferation: Self-renewal and cell cycle
+-12.41932695,9.516360361,179,179,0,5,A.01.c. Proliferation: Molecular mechanisms
+-12.11651193,7.505062028,179,179,0,5,A.01.d. Cell lineage
+-11.96269752,7.748913446,179,179,0,5,A.01.e. Mechanisms of cell fate
+-11.86594792,8.967893003,179,179,0,5,A.01.f. Cell migration
+-11.01988246,8.271382898,179,179,0,8,A.01.g. Neuronal differentiation
+-13.40307507,6.542901354,179,179,0,5,A.01.h. Glial differentiation and interaction with neurons
+-10.30870939,9.574187446,179,179,0,5,A.02 b. Postnatal neurogenesis: Molecular mechanisms
+-9.677458588,9.244093228,179,179,0,5,A.02 c. Postnatal neurogenesis: Environmental and pharmacological regulation
+-10.14056996,9.787988301,179,179,0,5,A.02.a. Postnatal neurogenesis: Temporal and spatial patterns
+-10.16978052,6.978864389,179,179,0,11,A.03.a. Pluripotent stem cells: Disease models
+-11.43334671,6.843509888,179,179,0,7,A.03.b. Pluripotent stem cells: Neural differentiation
+-10.86338877,6.19021159,179,179,0,5,A.03.c. Neural lineage reprogramming
+-10.86512881,7.002594512,179,179,0,6,A.03.d. Neural stem cells: In vitro studies
+-11.88491462,5.55971479,179,179,0,5,A.04.a. Transplantation
+-12.74283815,3.068262157,179,179,0,5,A.04.b. Regeneration: PNS
+-11.9456399,4.317197382,179,179,0,5,A.04.c. Regeneration: CNS
+-8.244919065,4.529261823,179,179,0,5,A.05.a. Axon growth and guidance: Adhesion and cytoskeletal dynamics
+-8.759773681,4.461884184,179,179,0,5,A.05.b. Axon growth and guidance: Axonal transport and trafficking
+-9.391792083,4.582665018,179,179,0,5,A.05.c. Axon growth and guidance: Extrinsic mechanisms
+-7.64560554,4.52141376,179,179,0,5,A.05.d. Dendritic growth and branching
+-6.446235887,4.079085044,179,179,0,5,A.06.a. Synapse formation
+-6.112743517,3.908075353,179,179,0,5,A.06.b. Synapse maturation and remodeling
+-4.920383644,5.413472826,179,179,0,5,A.06.c. Neural circuit maturation and remodeling
+-0.949983606,6.761153658,179,179,0,5,A.06.d. Mitochondria and synaptic function
+-5.143987503,9.094184419,179,179,0,9,A.07.I. Animal models of developmental disorders other than autism
+-3.487303784,10.58598007,179,179,0,5,A.07.a. Autism: Behavioral analysis
+-4.5496038,10.40538558,179,179,0,6,A.07.b. Autism: Genetic models
+-4.604247661,10.28170177,179,179,0,9,A.07.c. Autism: Synaptic and cellular mechanisms
+-3.086626095,9.81524691,179,179,0,5,A.07.d. Autism: Environment and pathology
+-3.785134713,10.90934806,179,179,0,8,A.07.e. Autism: Physiology and systems
+-7.000208106,9.050950026,179,179,0,5,A.07.f. Rett syndrome
+-6.01559866,10.69349166,179,179,0,5,A.07.g. Fragile X
+-20.63790578,-3.940444844,179,179,0,5,A.07.h. Down syndrome
+-6.281654613,9.608068576,179,179,0,5,A.07.i. Angelman and other developmental disorders
+2.216944218,10.57265459,179,179,0,5,"A.07.j. ADHD, SLI, dyslexia and other specific disorders of neurobehavior"
+-4.007499256,9.639801266,179,179,0,10,A.07.k. Animal models of autism
+-5.687451858,9.023205608,179,179,0,8,A.07.m. Molecular Mechanisms
+-5.357616354,6.925527405,179,179,0,5,A.08.a. Motor systems
+-4.526953259,5.643822027,179,179,0,5,A.08.b. Sensory systems
+-4.249422716,6.732734377,179,179,0,5,A.08.c. Limbic system
+4.052980189,10.75156045,179,179,0,5,A.09.a. Animal models
+4.237957318,11.93360143,179,179,0,5,A.09.b. Human imaging
+4.113493913,10.95714352,179,179,0,5,A.09.c. Mechanisms of vulnerability
+-7.607906164,13.34334844,179,179,0,5,A.10.a. Comparative anatomy
+-7.633176813,13.30956048,179,179,0,5,A.10.b. Comparative cellular and molecular mechanisms
+-1.530654843,-0.631578813,255,0,255,5,B.01.a. Glutamate
+0.508029018,12.38509131,255,0,255,7,B.01.b. Monoamines
+0.224243337,0.372622442,255,0,255,5,B.01.c. Amino acids and other small-molecule neurotransmitters and messengers
+0.338005458,13.80232477,255,0,255,5,"B.01.d. Opiates, cytokines, and other neuropeptides"
+-3.575269694,2.368666027,255,0,255,5,B.01.e. Neurotrophins
+-17.73134862,4.937317616,255,0,255,5,B.01.f. Comparative neurotransmitters
+-2.902289812,-3.949118966,255,0,255,5,B.02.a. Nicotinic acetylcholine receptors in brain: Physiology and function
+-2.895795715,-3.938008966,255,0,255,5,B.02.b. Nicotinic acetylcholine receptors: Structure and regulation
+1.218089758,2.527883892,255,0,255,5,B.02.c. NMDA receptors
+1.308130686,2.405276891,255,0,255,5,B.02.d. Non-NMDA receptors
+-2.063051021,1.232615271,255,0,255,5,B.02.e. GABA(A) receptors
+-2.117167895,0.910616764,255,0,255,5,B.02.f. Glycine receptors & other ligand gated ion channels
+-1.96257701,2.447548001,255,0,255,5,B.03.a. Metabotropic glutamate and GABA B receptors
+0.666608449,14.57744632,255,0,255,5,B.03.b. Peptide receptors
+-0.798855401,2.084603283,255,0,255,5,B.03.c. Other metabotropic receptors
+-10.91510618,13.71318946,255,0,255,5,B.04.a. Sodium channels
+-3.28425011,-0.272082751,255,0,255,5,B.04.b. Calcium channels
+-4.303734953,-0.311615246,255,0,255,5,B.04.c. Potassium channels
+-12.35859154,15.65453463,255,0,255,5,B.04.d. Non-selective cation channels
+-12.47354487,15.75364229,255,0,255,5,B.04.e. Mechanosensitive and other ion channels
+-0.62727874,-2.00139364,255,0,255,5,"B.05.a. Vesicle docking, fusion, recycling, biogenesis"
+-0.462398304,-1.684843843,255,0,255,5,B.05.b. Presynaptic organization and structure
+1.49554034,0.851323169,255,0,255,5,B.06.a. Postsynaptic organization and structure
+2.27724162,-1.292037831,255,0,255,5,B.06.b. Synaptic integration
+1.576663418,-1.805428089,255,0,255,5,B.06.c. Electrical synapses and gap junctions
+1.081656223,-0.795510821,255,0,255,5,B.06.d. Modulation: Peptides and amines
+-0.776671727,0.66848865,255,0,255,5,"B.06.e. Modulation: ACh, amino acids and GABA"
+-0.525619629,-0.064351435,255,0,255,5,B.06.f. Modulation: Mechanisms of action
+-1.212470663,0.261092381,255,0,255,5,B.06.g. Modulation: Pharmacology
+0.754358764,0.263985369,255,0,255,5,B.07.a. Short-term plasticity
+2.107360602,1.47375338,255,0,255,5,B.07.b. LTP: Kinases and intracellular signaling
+2.569580652,0.838381976,255,0,255,6,B.07.c. LTP: Pre- and Postsynaptic mechanisms
+4.082172323,0.356881838,255,0,255,5,B.07.d. Long-term depression (LTD)
+2.845805006,-1.551759461,255,0,255,5,B.07.e. Spike-timing dependent plasticity
+3.84470367,-0.448338096,255,0,255,8,B.07.f. Homeostatic plasticity
+2.767807718,0.054124962,255,0,255,10,B.07.g. Structural plasticity
+3.420072997,1.895476317,255,0,255,5,B.07.h. Transcription and translation in plasticity
+1.67955862,-0.258083593,255,0,255,6,B.07.i. Other
+1.860342139,-2.812486286,255,0,255,5,"B.08.a. Neural oscillators, dendritic properties and plasticity"
+0.994079749,-3.013914079,255,0,255,7,B.08.b. Modulation of neuronal firing properties
+6.215268509,-4.521968663,255,0,255,5,B.09.a. Signal propagation
+7.190405615,-4.799434021,255,0,255,5,B.09.b. Oscillations and synchrony: Unit studies
+8.198880292,-4.872566673,255,0,255,9,B.09.c. Oscillations and synchrony: EEG studies
+7.766599851,-4.84677606,255,0,255,9,B.09.d. Oscillations and synchrony: LFP studies
+6.534685727,-4.886480478,255,0,255,6,B.09.e. Network interactions: Other
+-6.496614144,-1.690977014,255,0,255,5,B.10.a. Genetics
+-4.937078232,-0.570612838,255,0,255,5,B.10.b. Channels
+-6.77216756,-2.347134163,255,0,255,5,B.10.c. Synaptic mechanisms
+-7.669391701,-2.515875037,255,0,255,5,B.10.d. Networks
+-7.086096342,-1.995629239,255,0,255,5,B.10.e. Post-seizure modifications
+-7.489493229,-1.916348512,255,0,255,5,B.10.f. In vivo and behavior
+-6.981577787,-1.01473495,255,0,255,9,B.10.g. Animal Models
+-7.485674175,-0.95932629,255,0,255,6,B.10.h. Anticonvulsant and antiepileptic therapies
+-8.155737839,-1.367511269,255,0,255,5,B.10.i. Human Studies
+-18.49688025,3.866991357,255,0,255,9,B.11.a. Astrocytes: Biology
+-18.3397943,3.173592729,255,0,255,10,B.11.b. Astrocytes: Disease mechanisms
+-18.77205401,1.702434032,255,0,255,6,B.11.c. Microglia: Biology
+-18.82262873,1.607134999,255,0,255,11,B.11.d. Microglia: Disease mechanisms
+-16.03585329,3.949523499,255,0,255,5,B.11.e. Oligodendrocytes
+-17.83981176,4.124976589,255,0,255,14,B.11.f. Glia-neuron interactions: CNS
+-12.82625884,3.077932152,255,0,255,5,B.11.g. Glia-neuron interactions: PNS
+-17.05808324,3.49183592,255,0,255,5,B.11.h. Glia-neuronal interaction in energy homeostasis
+-15.28362885,2.829303935,255,0,255,5,B.12.a. Molecular and cellular mechanisms
+-15.72307505,2.690200611,255,0,255,5,B.12.b. Therapeutics
+-15.29823962,2.952994265,255,0,255,5,B.12.c. Human and animal studies
+-15.08542339,0.885760879,255,0,255,5,B.13.a. Neuro-oncology
+-23.06452175,-5.998292554,0,179,179,7,C.01.a. Molecular mechanisms
+-22.3913332,-6.186926101,0,179,179,8,"C.01.b. Metabolism, oxidative stress, and cellular mechanisms"
+-23.83286511,-6.414154328,0,179,179,5,C.01.c. Pharmacological and non-pharmacological interventions
+-22.68409965,-7.329185816,0,179,179,5,C.01.d. Systemic factors and brain function
+-22.88806675,-7.373583971,0,179,179,5,C.01.e. Brain wellness
+-30.06656336,-6.842686402,0,179,179,5,C.02.a. Alzheimer's disease: Genetic analyses
+-30.24556501,-6.054597688,0,179,179,5,C.02.b. Alzheimer's disease: Omics approaches
+-26.19040904,-5.307675732,0,179,179,10,C.02.c. Alzheimer's disease: Neuroinflammation and immune actions
+-26.69816596,-4.400308851,0,179,179,11,C.02.d. Mechanisms of synaptic dysfunction in Alzheimer's disease
+-29.21563251,-4.176034738,0,179,179,5,C.02.e. Clinical and pre-clinical imaging studies in Alzheimer's disease
+-28.14460281,-4.58756667,0,179,179,5,C.02.f. APP and metabolites: Function and processing
+-27.3787969,-4.701280906,0,179,179,6,C.02.g. Abeta mechanisms of toxicity
+-26.84410506,-6.230795315,0,179,179,11,C.02.h. APP/Abeta: Animal and cellular models
+-27.59004802,-5.413160875,0,179,179,5,C.02.i. Abeta as a therapeutic target
+-27.61501075,-6.390900328,0,179,179,5,C.02.j. Abeta-tau interactions
+-28.08389851,-7.35902128,0,179,179,5,C.02.k. Tau: Biochemistry and physiology
+-27.18997494,-7.24587325,0,179,179,5,C.02.l. Tau: Animal and cellular models
+-28.1548184,-7.958762403,0,179,179,5,C.02.m. Tau: Preclinical and clinical pathology
+-28.45493574,-5.459550096,0,179,179,5,C.02.n. ApoE and associated pathways
+-25.46374545,-8.278422035,0,179,179,5,C.02.o. Altered energy homeostasis in Alzheimer's disease
+-29.24760595,-7.810068223,0,179,179,5,C.02.p. Therapeutic strategies: Preclinical cellular models
+-28.43780484,-6.34562424,0,179,179,15,C.02.q. Therapeutic strategies: Preclinical animal models
+-25.59564306,-7.105718119,0,179,179,5,C.02.r. Therapeutic strategies: Clinical trials
+-28.71277086,-8.615423325,0,179,179,5,C.02.s. Proteinopathy and pathology other than Abeta/tau
+-26.91432633,-8.882514126,0,179,179,5,C.02.t. Other dementias
+-29.40840142,-6.55728063,0,179,179,5,C.02.u. Genetics and functional genomics
+-29.43593304,-5.329802812,0,179,179,7,C.02.v. Biomarkers
+-24.55812398,-6.372094197,0,179,179,5,C.02.w. Alzheimer's disease: Therapeutic approaches: Clinical
+-27.63001823,-3.382689571,0,179,179,5,C.02.x. Other dementias
+-27.96440897,1.791040782,0,179,179,7,C.03.a. Cellular mechanisms
+-28.67854333,1.457838183,0,179,179,5,C.03.b. Mitochondrial mechanisms and genetics
+-28.41244642,2.623865501,0,179,179,5,C.03.c. Dopamine and non-dopamine pathways
+-28.220457,0.901671082,0,179,179,5,"C.03.d. LRRK2 mechanisms, targets and pathways"
+-29.78529861,1.538498477,0,179,179,5,C.03.e. Alpha-synuclein: Models
+-29.66320649,1.027711223,0,179,179,5,C.03.f. Alpha-synuclein: Mechanisms and transmission
+-27.62749267,2.782919899,0,179,179,5,C.03.g. Circuit mechanisms
+-28.10237083,3.878637843,0,179,179,5,C.03.h. Transgenic animal models
+-28.36122719,3.50194767,0,179,179,5,C.03.i. Rat and mouse toxin and behavior models
+-29.15001954,2.026862693,0,179,179,5,C.03.j. Neuroprotective mechanisms
+-30.03524295,2.304655564,0,179,179,5,C.03.k. Therapeutic strategies: Cellular models
+-29.02900117,2.587258424,0,179,179,11,C.03.l. Therapeutic strategies: Preclinical animal models
+-29.96116034,3.566421116,0,179,179,5,C.03.m. Therapeutic strategies: Clinical trials
+-28.74993827,4.396969159,0,179,179,5,C.03.n. Human studies: Genetics and diagnostic
+-24.03728621,4.026510132,0,179,179,5,C.04.a. Huntington's disease: Molecular mechanisms
+-24.04109483,4.029657872,0,179,179,5,C.04.b. Huntington's disease: Animal models
+-22.51708586,1.050374387,0,179,179,5,C.04.c. Ataxias
+-17.41316392,-12.92864161,0,179,179,5,C.04.d. Dystonia
+-17.41564425,-12.93059302,0,179,179,5,C.04.e. Clinical trials for movement disorders other than Parkinson's
+-27.83822784,-8.730594241,0,179,179,7,C.05.a. Cellular and molecular mechanisms
+-27.22353775,-7.982551607,0,179,179,5,C.05.b. Animal models
+-7.138903461,19.09425116,0,179,179,5,C.06.a. Motor neuron disease: Human genetics and cellular mechanisms
+-6.906868071,18.44836969,0,179,179,5,C.06.b. Motor neuron disease: In vitro studies
+-6.881254351,19.14173756,0,179,179,6,C.06.c. Motor neuron disease: Animal models
+-6.840574469,19.58894736,0,179,179,5,C.06.d. Motor neuron disease: Therapeutics
+-6.825792992,18.37172414,0,179,179,5,C.06.e. Other neuromuscular diseases
+-20.85989011,-0.700853187,0,179,179,7,C.07.a. Cellular stress and death mechanisms
+-20.45846484,-1.679052731,0,179,179,9,C.07.b. Mechanisms of neurotoxicity
+-21.69719688,-1.54202308,0,179,179,15,C.07.c. Mechanisms of neurodegeneration
+-21.16833844,-2.378992358,0,179,179,14,C.07.d. Neuroprotective mechanisms: Preclinical
+-22.05332113,-2.508330796,0,179,179,5,C.07.e. Neuroprotective mechanisms: Clinical
+-19.88880612,-0.580045592,0,179,179,11,C.07.f.  Neuroinflammation: Microglia
+-19.8825312,-1.088478401,0,179,179,5,C.07.g. Neuroinflammation: Beyond microglia
+-20.66328589,-1.219779802,0,179,179,11,C.07.h. Neuroinflammation: Neurodegeneration
+-19.88949129,-2.14522014,0,179,179,6,C.07.i.  Neuroinflammation: Animal models
+-18.69247673,-1.772597305,0,179,179,5,C.07.j.  Neuroinflammation: HIV and infections
+-15.1470009,-3.603920952,0,179,179,5,C.08.a. Molecular mechanisms
+-14.6780927,-3.335582132,0,179,179,5,C.08.b. Cellular mechanisms
+-14.8896091,-4.240835197,0,179,179,5,C.08.c. Ischemia: Perinatal
+-13.77225479,-4.352107217,0,179,179,5,C.08.d. Ischemia: Recovery
+-14.87158653,-4.677029,0,179,179,5,C.08.e. Ischemia and Hemorrhage: Animal Models
+-14.29480414,-3.960680326,0,179,179,5,"C.08.f. Therapeutic, interventional, and translational studies"
+-12.92721968,-4.24793139,0,179,179,6,"C.09.a. Stroke, damage, or disease: Assessment and treatment"
+-12.4720352,-5.021552421,0,179,179,5,"C.09.b. Stroke, damage, or disease: Mechanisms of abnormal movement"
+-12.71557699,-5.308744582,0,179,179,5,C.09.c. Stroke imaging and diagnostic studies
+-13.51972705,-3.271533885,0,179,179,5,C.09.d. Stroke recovery: Pharmacological approaches to therapy
+-13.44320534,-5.079753732,0,179,179,5,C.09.e. Stroke recovery: Non-pharmacological approaches to therapy
+-17.43639851,-4.286097881,0,179,179,8,C.10.a. Brain: Cellular and molecular mechanisms
+-17.77077591,-4.694852768,0,179,179,5,C.10.b. Brain: Histology and cellular markers of brain injury
+-17.54719614,-5.218633784,0,179,179,10,C.10.c. Brain: Animal models of brain injury: Physiology and behavior
+-17.74042814,-6.238119364,0,179,179,7,C.10.d. Brain: Human studies
+-17.03736099,-5.243600642,0,179,179,5,C.10.e. Brain: Pre-clinical therapeutic strategies
+-17.72865279,-6.152757169,0,179,179,5,C.10.f. Brain: Clinical therapeutic strategies
+-16.5274884,-7.158051256,0,179,179,5,"C.10.g. Peripheral nerve trauma, crush and toxic injury"
+-20.19311461,9.354342356,0,179,179,8,C.11.a. Spinal cord injury: Cellular and molecular mechanisms
+-19.68990525,9.763337493,0,179,179,5,C.11.b. Spinal cord injury: Animal models and human studies
+-20.43846521,9.724202582,0,179,179,9,C.11.c. Spinal cord injury: Therapeutic strategies: In vivo
+-20.34086317,10.61840892,0,179,179,5,C.11.d. Spinal cord injury: Posture and locomotion
+-20.02557142,10.25271669,0,179,179,5,C.11.e. Spinal cord injury: Recovery
+-20.80623029,10.50611366,0,179,179,5,"C.11.f. Spinal cord injury: Training, rehabilitation, and repair"
+-21.09991278,10.02529713,0,179,179,5,C.11.g. Plasticity: Neurophysiology
+14.91721691,-8.413366857,0,128,255,5,D.01.a. Visual and auditory
+-16.71469424,18.33579411,0,128,255,5,D.02.a. Spinal circuits: Anatomy and physiology
+-16.23259014,18.89272351,0,128,255,5,D.02.b. Spinal circuits: Functional organization
+-14.8845036,18.56135615,0,128,255,5,D.02.c. Itch
+-14.23561376,19.30626798,0,128,255,5,D.02.d. TRP channels
+-15.40336593,19.68148126,0,128,255,7,D.03.a. Nociceptors
+-13.96630834,20.55961653,0,128,255,5,D.03.b. Trigeminal processing
+-13.16638942,20.85646265,0,128,255,5,D.03.c. Headache and migraine
+-17.68340497,19.82905727,0,128,255,5,D.03.d. Thalamic and cortical processing
+-17.16388957,20.58640848,0,128,255,5,D.03.e. Descending modulation
+-16.30836964,21.4191186,0,128,255,5,D.03.f. Treatments for persistent pain
+-14.80504113,21.43090891,0,128,255,5,D.03.g. Pain models: Pharmacology
+-15.98456692,20.19513233,0,128,255,5,D.03.h. Pain models: Behavior
+-16.33961956,20.70895249,0,128,255,5,D.03.i. Pain models: Physiology
+-15.57931064,21.03610701,0,128,255,6,D.03.j. Inflammatory pain
+-15.12465625,20.36323616,0,128,255,7,D.03.k. Peripheral mechanisms of neuropathic pain
+-16.69865458,19.82303235,0,128,255,5,D.03.l. Central mechanisms of neuropathic pain
+-16.90605097,21.99050992,0,128,255,5,D.03.m. Visceral and musculoskeletal pain
+-17.73706396,21.2401081,0,128,255,5,D.03.n. Pain imaging and perception
+-15.04947992,22.73472697,0,128,255,5,D.03.o. Opioid receptor pharmacology and signaling mechanisms
+-15.53741939,22.057401,0,128,255,5,D.03.p. Non-opioid analgesics
+-15.68891757,18.13057402,0,128,255,5,D.04.a. Transduction mechanisms
+-7.582561156,-7.007495907,0,128,255,5,D.04.b. Plasticity and reorganization
+-7.160516988,-8.117529664,0,128,255,5,D.04.c. Thalamic and cortical processing
+-7.278782633,-7.76585753,0,128,255,5,D.04.d. Barrel cortex
+-16.82655374,17.09160263,0,128,255,5,D.04.e. Stimulus feature receptive fields and response properties
+-16.98369934,16.53816622,0,128,255,5,D.04.f. Stimulus feature neural coding
+-6.2150215,-14.63671403,0,128,255,5,D.05.a. Olfactory receptor cells and transduction
+-6.668921568,-14.27630654,0,128,255,5,D.05.b. Olfactory coding: Second order regions (olfactory bulb and antennal lobe)
+-6.750937516,-14.20263936,0,128,255,5,D.05.c. Olfaction: Higher-order circuits
+-6.800117979,-14.15096618,0,128,255,5,"D.05.d. Olfaction: Behavior, perception, and its relation to neurophysiology"
+-7.62766674,-13.45847499,0,128,255,5,D.05.e. Taste
+13.86367019,-9.198386836,0,128,255,5,D.06.a. Hair cells and the periphery
+13.71956575,-6.965802385,0,128,255,5,D.06.b. Auditory processing: Sound localization and binaural interactions
+14.00065669,-6.4461629,0,128,255,5,"D.06.c. Auditory processing: Temporal, frequency, and spectral processing"
+14.60694595,-5.955464924,0,128,255,5,D.06.d. Auditory processing: Vocalizations and natural sounds
+14.61505639,-7.519259865,0,128,255,5,"D.06.e. Auditory processing: Circuits, synapses, and neurotransmitters"
+14.5788596,-7.079219286,0,128,255,5,"D.06.f. Auditory processing: Adaptation, learning, and memory"
+13.54563628,-6.282048612,0,128,255,5,"D.06.g. Auditory processing: Neural coding, experiment, and theory"
+14.75747637,-6.563457349,0,128,255,7,"D.06.h. Auditory processing: Perception, cognition, and action"
+12.75199996,-10.67072581,0,128,255,5,D.06.i. Vestibular central physiology and anatomy
+12.76532931,-10.66287002,0,128,255,5,"D.06.j. Vestibular perception, posture, and spatial orientation"
+19.30489155,-8.140818548,0,128,255,5,D.07.a. Retina: Photoreceptors
+19.36474612,-8.185848286,0,128,255,5,D.07.b. Retinal circuitry
+22.76488416,-14.46124591,0,128,255,5,D.07.c. Subcortical visual pathways
+24.03025978,-12.88361501,0,128,255,15,D.07.d. Visual Cortex: Circuits and Populations
+22.32794085,-12.91206291,0,128,255,5,D.07.e. Visual System: Responses During Behavior
+24.44849528,-12.17817506,0,128,255,5,D.07.f. Visual System: Response Modulation and Adaptation
+23.49975362,-13.6880556,0,128,255,5,D.07.g. Visual Cortical Streams: Primate and Carnivora
+24.25807895,-14.08863088,0,128,255,5,D.07.h. Visual Cortical Streams: Rodentia
+23.51876447,-12.96274027,0,128,255,10,D.07.i. Visual Cortex: Functional Architecture and Circuits
+22.76100859,-13.70397827,0,128,255,5,D.07.j. Visual Pathways: To and From the Cortex
+25.22155037,-12.95291203,0,128,255,5,D.07.k. Striate cortex: Plasticity
+23.03839855,-12.35416446,0,128,255,5,D.07.l. Extrastriate cortex
+23.48745929,-12.04152801,0,128,255,5,"D.07.m. Processing of contrast, form, and color"
+21.92438948,-12.14783941,0,128,255,5,D.07.n. Visual motion
+23.24811554,-10.99467258,0,128,255,6,D.07.o. Representation of objects and scenes
+23.99099185,-10.65898475,0,128,255,5,D.07.p. Representation of faces and bodies
+22.33893186,-10.87331044,0,128,255,5,"D.07.q. Visual learning, memory, and categorization"
+22.36804158,-9.991993064,0,128,255,5,D.07.r. Spatial and feature-based attention
+18.57371105,3.260931165,0,128,255,7,D.07.s. Visual cognition: Decision making
+20.73079249,-11.35740304,0,128,255,5,D.08.a. Eye movements and perception
+20.29048084,-13.10360356,0,128,255,5,D.08.b. Sensorimotor transformation: Behavior and whole animal
+20.1222831,-13.50997449,0,128,255,5,D.08.c. Sensorimotor transformation: Neuroprocessing
+13.30156822,-17.86922939,0,128,255,5,D.08.d. Visually-guided reaching
+16.68978655,-13.29201173,0,128,255,5,D.09.a. Cross-modal processing: Spatial factors
+16.73480223,-13.33842609,0,128,255,5,D.09.b. Cross-modal processing: Temporal factors
+16.31780507,-12.23905123,0,128,255,5,D.09.c. Cross-modal processing: Neural circuitry and development
+16.47838879,-12.54018189,0,128,255,5,D.09.d. Cross-modal processing: In humans
+19.62115242,-11.75281809,255,0,0,5,E.01.a. Eye movements: Central mechanisms
+19.63518931,-11.44706649,255,0,0,5,E.01.b. Eye movements: Saccades
+20.18122939,-11.52172852,255,0,0,5,E.01.c. Eye movements: Perception and neural mechanisms
+2.476310946,-16.30101023,255,0,0,6,E.02.a. Cerebellum: Cortex and nuclei
+2.475192136,-16.29939269,255,0,0,5,E.02.b. Cerebellum: Plasticity and climbing fibers
+13.71674637,-20.06133553,255,0,0,5,E.02.c. Cerebellum: Human studies
+11.26323017,1.10288389,255,0,0,5,E.03.a. Transmitters and neuromodulation
+10.75476563,0.659162814,255,0,0,5,E.03.b. Cellular physiology
+11.13927048,0.522302146,255,0,0,5,E.03.c. Systems physiology and plasticity
+11.8193793,0.510983249,255,0,0,7,E.03.d. Systems behavior
+10.89363332,-19.6706827,255,0,0,5,E.04.a. Finger and grasp control: Normal human behavior
+10.50160141,-20.24735109,255,0,0,5,"E.04.b. Finger and grasp control: Age, pathology, and physiology"
+12.44709392,-18.49091909,255,0,0,5,E.04.c. Reaching control: Action and sensation
+12.05306002,-18.4857489,255,0,0,5,E.04.d. Reaching control: Movement selection and strategy
+12.71324985,-19.29886148,255,0,0,6,E.04.e. Reaching control: Motor learning: Human
+11.53365621,-20.87693674,255,0,0,5,E.04.f. Reaching control: Motor learning: Animal
+11.86769922,-19.33336502,255,0,0,5,E.04.g. Interlimb and bimanual control
+11.0609754,-19.0762526,255,0,0,5,E.04.h. Cortical planning and execution: Behavior
+10.64632206,-18.60722768,255,0,0,5,E.04.i. Cortical planning and execution: Neurophysiology: Human
+11.89969428,-20.14731863,255,0,0,6,E.04.j. Cortical planning and execution: Neurophysiology: Animal
+11.20954998,-17.72917586,255,0,0,5,E.04.k. Cortical planning and execution: Neuroimaging
+16.19609343,16.84276563,255,0,0,5,E.04.l. Oral motor and speech
+9.987678493,-18.63381607,255,0,0,6,E.04.m. Plasticity
+8.845605599,-14.04372187,255,0,0,9,E.05.a. Neurophysiology: Non-invasive techniques
+7.919985967,-14.66501356,255,0,0,8,E.05.b. Neurophysiology: Implanted electrodes and other direct interactions with neurons
+8.615070127,-14.66538453,255,0,0,5,E.05.c. Neurophysiology: Neural processing
+8.494392675,-15.02959947,255,0,0,6,"E.05.d. Neuroprosthetics: Control of real and artificial arm, hand, other grasping devices"
+8.289364369,-14.35979433,255,0,0,5,"E.05.e. Neuroprosthetics: Other motor sensory interfaces (e.g., artificial vision)"
+8.334877364,-21.53317364,255,0,0,5,"E.06.a. Posture and gait: Kinematics, muscle activity, exercise and fatigue, and biomechanics"
+7.630747202,-21.41132182,255,0,0,5,E.06.b. Posture and gait: Afferent control
+8.74328834,-21.10432731,255,0,0,5,"E.06.c. Posture and gait: Higher order control, multi-task integration, and theory"
+7.947729732,-22.28057644,255,0,0,5,"E.06.d. Posture and gait: Aging, injury, and disease"
+7.64810365,-20.66817838,255,0,0,5,E.06.e. Reflexes and reflex modulation
+5.304150755,-21.33403975,255,0,0,5,E.07.a. Cellular properties: Interneurons and motor neurons
+5.144794062,-21.47540728,255,0,0,5,E.07.b. Connectivity
+6.033494601,-20.90268915,255,0,0,5,E.07.c. Neuromodulation
+5.774251506,-21.51131714,255,0,0,5,E.07.d. Afferent and descending control
+3.085986221,-20.33941461,255,0,0,5,E.08.a. Respiratory control
+3.199089634,-20.37863921,255,0,0,5,E.08.b. Respiratory regulation: Respiratory rhythm and pattern generation
+7.285242869,-18.74510389,255,0,0,5,"E.09.a. Motor neurons: Activity, sensory, and central control: Exercise, injury, and disease"
+6.515716151,-18.77464341,255,0,0,5,"E.09.b. Motor neurons: Development, identification, intrinsic properties, and modulation"
+8.178299298,-19.06935731,255,0,0,5,"E.09.c. Motor unit recordings, kinematics, and EMG"
+6.701336718,-18.24219291,255,0,0,5,E.09.d. Motorneuron-muscle interface and muscle physiology/biochemistry
+16.44857539,15.88784063,0,255,0,7,F.01.a. Sensory and motor systems
+16.25896239,16.63555916,0,255,0,5,F.01.b. Vocal/social communication: Avian
+15.4944113,15.92486172,0,255,0,5,F.01.c. Vocal/social communication: Non-avian
+11.55909502,16.43092259,0,255,0,5,F.02.a. Sexual behavior
+10.70763953,17.4052545,0,255,0,5,F.02.b. Parental behavior
+11.90567684,16.23910491,0,255,0,6,F.02.c. Social behavior
+10.78072621,17.52754983,0,255,0,5,F.02.d. Defensive behavior and aggression
+9.712578301,16.90730432,0,255,0,7,F.02.e. Hormones and cognition
+7.83105451,17.93284756,0,255,0,5,F.03.a. HPG axis: GnRH cells and gonadotrophins
+7.90837668,17.79889361,0,255,0,5,F.03.b. HPG axis: Neural control
+7.510033832,17.40651893,0,255,0,5,F.03.c. Neuroendocrine anatomy and physiology
+8.805535704,15.87301122,0,255,0,5,F.03.d. Sexual differentiation
+7.278080221,11.76492988,0,255,0,7,F.04.a. Stress and neuroimmunology
+8.690842949,11.97775052,0,255,0,5,F.04.b. Cellular actions of stress
+7.569303501,13.22230512,0,255,0,5,"F.04.c. Early-life Stress: Neural, neurochemical, and physiologic effects"
+7.622911003,13.1024621,0,255,0,5,F.04.d. Early-life Stress: Molecular mechanisms and cellular effects
+8.70672531,13.66969651,0,255,0,5,"F.04.e. Early-life Stress: Effects on anxiety, social function, and depression"
+8.865594334,13.21360019,0,255,0,5,F.04.f. Early-life Stress: Adolescence
+8.59444574,11.39817663,0,255,0,8,"F.04.g. Stress-modulated pathways: Cortex, hippocampus, and striatum"
+9.70518049,12.31903642,0,255,0,9,"F.04.h. Stress-modulated pathways: Hypothalamus, amygdala, and bed nucleus"
+9.962563614,12.9885117,0,255,0,5,F.04.i. Stress-modulated pathways: Brainstem and other
+9.401530003,11.67084656,0,255,0,6,F.04.j. Stress and cognition
+-17.19858317,-0.286253517,0,255,0,5,F.05.a. Regulating systems
+-17.11199658,-0.313500663,0,255,0,6,F.05.b. Behavioral effects
+1.539699675,18.39881632,0,255,0,5,F.06.a. Energy metabolism
+-12.60769101,-9.186731102,0,255,0,5,F.06.b. Blood flow
+-13.09963493,-9.586335018,0,255,0,5,F.06.c. Blood brain barrier
+-12.56198156,-9.193323763,0,255,0,6,F.06.d. Functional imaging
+4.462150325,17.97222234,0,255,0,5,F.07.a. Cardiovascular regulation
+5.199976459,17.3508899,0,255,0,5,"F.07.b. Gastrointestinal, renal/urinary, and reproductive regulation"
+3.734035906,17.53214928,0,255,0,5,F.07.c. Thermoregulation and other
+3.603030772,22.36532464,0,255,0,5,F.08.a. Entrainment and phase shifts
+3.447993294,21.8633045,0,255,0,5,F.08.b. Molecular biology and physiology of clocks
+4.375825857,23.24546752,0,255,0,5,"F.08.c. Sleep: Molecular, cellular, and pharmacology"
+4.596912203,23.02321247,0,255,0,5,F.08.d. Sleep: Regulators
+4.874275177,23.03057786,0,255,0,7,F.08.e. Sleep: Systems
+5.181626088,22.74337472,0,255,0,7,F.08.f. Sleep: Behavior
+3.690711096,22.07100798,0,255,0,5,"F.08.g. SCN anatomy, physiology, neurochemistry"
+3.521321597,15.76639174,0,255,0,5,F.09.a. Thirst and water balance
+2.969671343,16.71507301,0,255,0,5,F.10.a. Integration of peripheral signals: Regulators
+2.775967644,16.73241487,0,255,0,5,F.10.b. Integration of peripheral signals: Systems
+2.015551762,16.03442385,0,255,0,5,F.10.c. Central pathways: Anatomy and development
+1.750556517,15.97622968,0,255,0,5,F.10.d. Neuropeptide regulators
+1.999344498,16.7450428,0,255,0,5,"F.10.e. Monoamines, amino acids, and other regulators"
+13.14225591,3.884182444,0,0,255,5,G.01.a. Appetitive and incentive learning and memory
+14.49287003,10.39016006,0,0,255,5,G.01.b. Fear and aversive learning and memory: Acquisition
+14.48400536,10.30037853,0,0,255,5,G.01.c. Fear and aversive learning and memory: Modulation
+14.696362,10.58884243,0,0,255,5,G.01.d. Fear and aversive learning and memory: Extinction
+14.33564451,9.776787004,0,0,255,7,G.01.e. Fear and aversive learning and memory: Neural Circuitry
+12.32006253,2.559850491,0,0,255,11,G.02.a. Reward: Dopamine
+11.43411117,3.889428518,0,0,255,5,G.02.b. Reward: Cell signaling
+13.53537209,2.665680947,0,0,255,7,G.02.c. Reward: Neurophysiology
+12.27656395,3.455526838,0,0,255,5,G.02.d. Reward: Neuropharmacology
+13.10540251,3.220171963,0,0,255,8,G.02.e. Motivation: Subcortical neurocircuitry
+14.15352342,4.076770506,0,0,255,5,G.02.f. Motivation: Cortical neurocircuitry
+14.60126128,14.87639382,0,0,255,8,G.02.g. Motivation: Social communication and behavior
+13.21814872,7.323642982,0,0,255,6,G.03.a. Human Emotion
+11.98491625,7.670232246,0,0,255,9,G.03.b. Emotion: Neurocircuitry
+11.811068,8.585839155,0,0,255,13,"G.03.c. Emotion: Fear, anxiety, and pain"
+12.89156266,7.172963945,0,0,255,7,G.03.d. Emotion: Positive and negative emotional states
+7.415951255,7.63204021,0,0,255,5,G.04.a. Depression: Human imaging and behavioral studies
+7.221919452,8.409645549,0,0,255,6,G.04.b. Depression: Treatment and drug discovery
+7.905388268,9.418434865,0,0,255,9,G.04.c. Depression: Animal models: Behavioral mechanism
+7.640884727,9.085777057,0,0,255,10,G.04.d. Depression: Animal models: Neural mechanisms
+6.976678453,8.733709381,0,0,255,5,G.04.e. Depression: Animal models of therapeutics
+7.925205266,8.406328747,0,0,255,5,G.04.f. Bipolar disorders
+12.50909918,8.389472961,0,0,255,5,G.05.a. Human studies & therapeutic approaches
+11.07686006,9.371479119,0,0,255,5,G.05.b. Preclinical models
+11.27346559,8.971107447,0,0,255,5,G.05.c Therapeutic approaches
+11.24711039,11.19494772,0,0,255,5,G.06.a. Human studies
+11.12451802,10.62825977,0,0,255,5,G.06.b. Preclinical models
+9.003483647,7.720480265,0,0,255,5,G.07.a. Other psychiatric disorders
+-8.884779692,-22.00512896,0,0,255,5,G.08.a. Addictive drugs: Developmental effects
+-9.163277409,-22.91381989,0,0,255,5,"G.08.b. Addictive drugs: Drug tolerance, dependence, and toxicity"
+-6.317752867,-22.93801096,0,0,255,5,G.08.c. Addiction: Genetics
+-6.862914024,-23.64045116,0,0,255,5,G.08.d. Addiction treatment: Translational and clinical studies
+-8.070653356,-23.53449137,0,0,255,8,"G.08.e. Learning, memory, and addiction"
+-7.09225581,-21.75862826,0,0,255,5,G.08.f. Alcohol: Intake and preference
+-6.63389095,-22.15469062,0,0,255,5,G.08.g. Alcohol: Other behavioral effects
+-7.634972004,-22.15518169,0,0,255,7,G.08.h. Alcohol: Neural mechanisms
+-9.547609108,-24.21393444,0,0,255,5,G.08.i. Amphetamines: Behavioral mechanisms of addiction
+-8.959635955,-24.16881676,0,0,255,5,G.08.j. Amphetamines: Neural mechanisms of addiction
+-5.081810906,-22.69472861,0,0,255,5,G.08.k. Cannabinoids: Neural mechanisms and addiction
+-6.931017027,-24.83043135,0,0,255,5,G.08.l. Cocaine reinforcement
+-7.790918483,-24.6026272,0,0,255,5,G.08.m. Cocaine seeking and reinstatement
+-7.227417379,-25.54622992,0,0,255,5,G.08.n. Cocaine: Other behavioral studies
+-7.465848695,-24.15945111,0,0,255,6,G.08.o. Cocaine: Circuitry and neurophysiology of addiction
+-8.320529865,-25.14229532,0,0,255,5,G.08.p. Cocaine: Cell signaling and addiction
+-6.101090389,-24.50308534,0,0,255,5,"G.08.q. Opioid reinforcement, seeking, and reinstatement"
+-5.727772894,-23.93877226,0,0,255,5,G.08.r. Opioids: Neural mechanisms of addiction
+-8.612911265,-22.68951575,0,0,255,5,"G.08.s. Nicotine: Reinforcement, seeking, and reinstatement"
+-7.296316811,-23.03585253,0,0,255,5,G.08.t.  Nicotine:  Neural mechanisms of addiction
+18.13430013,-2.123852898,128,128,128,8,H.01.a. Functional mechanisms of attention
+24.45193882,-2.382518691,128,128,128,5,H.01.aa. Learning and memory: Invertebrates
+17.84634092,2.589033806,128,128,128,16,H.01.b. Decision making: Prefrontal cortex
+24.72092883,0.303037218,128,128,128,5,H.01.bb. Cortical and hippocampal circuits: Episodic and episodic-like memory
+17.09863874,3.025732656,128,128,128,5,H.01.c. Decision making: Orbitofrontal cortex
+25.07962475,2.398735428,128,128,128,5,H.01.cc. Cortical and hippocampal circuits: Timing and temporal processing
+17.15773186,2.242530656,128,128,128,8,H.01.d. Decision making: Corticolimbic circuits
+25.30176045,1.153761488,128,128,128,10,H.01.dd. Cortical and hippocampal circuits: Spatial navigation
+20.9606207,0.990106645,128,128,128,13,H.01.e. Executive function: Learning and memory
+19.38571703,1.583904118,128,128,128,5,H.01.f. Executive function: Network activity
+25.96428379,0.938138452,128,128,128,5,H.01.ff. Cortical and hippocampal circuits: Place cells
+16.22465249,-0.601592595,128,128,128,5,H.01.g. Executive function: Models of disorders
+18.22240926,-2.082703129,128,128,128,5,H.01.gg. Thalamic and brainstem circuits
+16.4437244,0.093524993,128,128,128,5,H.01.h. Executive function: Inhibitory control
+16.07924076,1.490950247,128,128,128,5,H.01.hh. Cortical and striatal circuits
+19.92167752,0.410412969,128,128,128,8,H.01.i. Working memory
+18.20879158,0.515283807,128,128,128,5,"H.01.ii. Associative, nonassociative, and skill learning"
+14.84577353,14.20609093,128,128,128,6,H.01.j. Social memory and cognition
+22.89538545,-0.945411381,128,128,128,5,H.01.k. Memory consolidation and reconsolidation: Behavior
+22.80318091,-1.831645833,128,128,128,5,H.01.l. Memory consolidation and reconsolidation: Molecular mechanisms
+22.69705308,-0.044114263,128,128,128,5,H.01.m. Memory consolidation and reconsolidation: Neural circuit mechanisms
+23.74823085,0.951570675,128,128,128,11,H.01.n. Learning and memory: Cortical-hippocampal interactions
+23.67872035,0.338826088,128,128,128,20,H.01.o. Learning and memory: Hippocampal circuits
+22.68261121,1.732251548,128,128,128,5,H.01.p. Learning and memory: Hippocampal-prefrontal interactions
+24.50834498,2.192103499,128,128,128,5,H.01.q. Learning and memory: Hippocampal-striatal interactions
+23.9655754,-0.528309916,128,128,128,5,H.01.r. Learning and memory: Dentate gyrus
+25.82885435,1.422713384,128,128,128,5,H.01.s. Learning and memory: Entorhinal cortex
+22.58979322,-2.580027491,128,128,128,9,H.01.t. Learning and memory: Molecular mechanisms
+22.22344318,0.567087499,128,128,128,13,H.01.u. Learning and memory: Neural circuit mechanisms
+23.22296482,1.226425687,128,128,128,5,H.01.v. Learning and memory: Gamma and theta rhythms
+22.59693866,-2.791665942,128,128,128,5,H.01.w. Learning and memory: Genes and signaling
+21.76860202,0.139755706,128,128,128,6,H.01.x. Learning and memory: Physiology
+21.61043228,-1.991049084,128,128,128,5,H.01.y. Learning and memory: Pharmacology
+-21.45988269,-9.359955785,128,128,128,5,H.01.z. Learning and memory: Aging
+20.24537324,8.174920627,128,128,128,8,H.02.a. Perception and imagery
+22.50403333,7.288619969,128,128,128,6,H.02.b. Human learning: Perceptual and spatial learning
+12.83639275,-15.50827083,128,128,128,5,H.02.c. Human learning: Motor and sequence learning
+18.64207607,5.62146513,128,128,128,7,"H.02.d. Human learning: Feedback, reinforcement and reward"
+23.38858936,5.406328921,128,128,128,8,H.02.e. Human long-term memory: Medial temporal lobe
+23.38989941,5.98550317,128,128,128,7,H.02.f. Human long-term memory: Retrieval
+23.86521232,5.43120524,128,128,128,6,H.02.g. Human long-term memory: Encoding
+24.0914143,5.971048863,128,128,128,6,H.02.h. Human long-term memory: Encoding-retrieval interactions
+23.94550092,6.444725176,128,128,128,5,H.02.i. Human long-term memory: Reconsolidation
+20.9621186,7.405967871,128,128,128,6,H.02.j. Functional mechanisms of attention
+20.6394434,7.393646235,128,128,128,5,H.02.k. Attentional networks
+18.73919263,6.519377602,128,128,128,11,H.02.l. Executive function
+15.12135045,-3.969446852,128,128,128,8,H.02.m. Language
+20.8559947,5.770642296,128,128,128,9,H.02.n. Working memory
+17.77363409,4.149861802,128,128,128,15,H.02.o. Decision making and reasoning: Cognition and computational models
+17.93029393,4.623681005,128,128,128,12,H.02.p. Decision making and reasoning: Neural mechanisms
+17.72555937,7.450094113,128,128,128,5,H.02.q. Cognitive development
+-20.74722173,-10.1596433,128,128,128,10,H.02.r. Cognitive aging
+18.85787934,7.040864601,128,128,128,5,H.02.s. Individual differences
+21.48557386,8.758756254,128,128,128,6,H.02.t. Timing and temporal processing
+18.38535421,9.655081878,128,128,128,5,H.02.u. Social cognition: Behavior and pharmacology
+18.32581189,9.643089563,128,128,128,5,H.02.v. Social cognition: Neural processes and disorders
+1.72697279,7.23058761,128,128,128,5,H.03.a. Neuropathology
+0.469858479,7.071462393,128,128,128,5,H.03.b. Genetics and genomics
+2.589100979,7.169545005,128,128,128,5,H.03.c. Behavior and symptoms
+2.263969792,7.465452775,128,128,128,5,H.03.d. Circuits and systems
+2.73205097,6.776075216,128,128,128,5,H.03.e. Animal models: Developmental
+3.420086275,6.78201238,128,128,128,5,H.03.f. Animal models: Pharmacological
+0.614882437,7.098952768,128,128,128,5,H.03.g. Biochemical studies
+-0.546114645,-10.26052508,0,0,0,5,I.01.a. Biochemical techniques
+-0.13144103,-10.23050221,0,0,0,10,I.01.b. Molecular techniques
+0.357588484,-10.05607307,0,0,0,10,I.01.c. Genetic techniques
+-0.04992491,-12.31236395,0,0,0,5,"I.02.a. Genomics, proteomics, and systems biology"
+-0.018954609,-12.24903071,0,0,0,5,I.02.b. Bioinformatics
+-1.554036217,-8.376020121,0,0,0,5,"I.03.a. Staining, tracing, and imaging techniques: Sample preparation"
+-1.487334043,-8.55882951,0,0,0,7,"I.03.b. Staining, tracing, and imaging techniques: Image acquisition"
+-2.159232336,-8.420626875,0,0,0,13,"I.03.c. Staining, tracing, and imaging techniques: Circuit tracing"
+-2.546249167,-10.21873946,0,0,0,5,"I.03.d. Staining, tracing, and imaging techniques: Electron microscopy"
+-2.382389595,-10.12093314,0,0,0,5,"I.03.e. Staining, tracing, and imaging techniques: Novel probes"
+1.32871175,-8.49786636,0,0,0,9,I.04.a. Optical methodology: Development
+1.366731399,-8.44757952,0,0,0,7,I.04.b. Optical methodology: Application
+1.169762805,-7.824244895,0,0,0,6,I.04.c. Optical methodology: Probes
+1.736448595,-7.956754166,0,0,0,13,I.04.d. Optogenetics
+3.775380725,-9.4187816,0,0,0,5,I.04.e. Electrophysiology: Cellular
+3.836157509,-7.414552962,0,0,0,6,I.04.f. Electrophysiology: Neural networks
+3.664917039,-8.075277187,0,0,0,12,I.04.g. Electrophysiology: Electrode arrays
+3.78676813,-7.327419743,0,0,0,10,I.04.h. Electrophysiology: Stimulating neurons
+2.53169531,-9.922393413,0,0,0,6,I.04.i. Novel assays
+5.057528783,6.591950671,0,0,0,5,I.05.a. Affective disorders and schizophrenia
+-24.93167605,-0.282022743,0,0,0,5,"I.05.b. Neurodegenerative diseases (AD, PD, MS, stroke)"
+-24.89564664,-0.335216875,0,0,0,5,I.05.c. Drug delivery
+6.284034781,-10.32502884,0,0,0,5,I.06.a. Cellular models
+7.316341143,-9.46899999,0,0,0,6,I.06.b. Network models: Theory
+7.232344102,-9.288371327,0,0,0,9,I.06.c. Network models: Experimentation
+6.178352773,-9.191897259,0,0,0,16,I.06.d. Computational tools
+6.396912934,-8.417885445,0,0,0,13,I.07.a. Data analysis and statistics: Human data
+6.606890734,-9.320006338,0,0,0,9,I.07.b. Data analysis and statistics: Neuronal networks
+5.206644611,-9.337862314,0,0,0,9,I.07.c. Software Tools
