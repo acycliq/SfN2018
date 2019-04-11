@@ -1,7 +1,7 @@
 function section() {
 
-    var totalWidth = 450,
-        totalHeight = 275;
+    var totalWidth = 750,
+        totalHeight = 575;
 
     var margin = {
         top: 10,
@@ -40,7 +40,7 @@ function section() {
     // });
 
     // select the root container where the chart will be added
-    var container = d3.select('#scatter-plot');
+    var container = d3.select('#mymap');
 
     var zoom = d3.zoom()
         .scaleExtent([1, 20])
@@ -115,37 +115,6 @@ function section() {
     // voronoi
     var voronoi = d3.voronoi()
 
-    function renderOrder(y) {
-        return y === 'Zero' ? 1 :
-            y === 'PC' ? 2 :
-                y === 'Non Neuron' ? 3 :
-                    y === 'PC Other2' ? 4 :
-                        y === 'PC Other1' ? 5 :
-                            y === 'Bistratified' ? 6 :
-                                y === 'Sst/Reln/NPY' ? 7 :
-                                    y === 'IS1' ? 8 :
-                                        y === 'CGE NGF' ? 9 :
-                                            y === 'Basket' ? 10 :
-                                                y === 'IS3' ? 11 :
-                                                    y === 'Radiatum retrohip' ? 12 :
-                                                        y === 'MGE NGF' ? 13 :
-                                                            y === 'O/LM' ? 14 :
-                                                                y === 'NGF/I-S transition' ? 15 :
-                                                                    y === 'Trilaminar' ? 16 :
-                                                                        y === 'Axo-axonic' ? 17 :
-                                                                            y === 'O-Bi' ? 18 :
-                                                                                y === 'Ivy' ? 19 :
-                                                                                    y === 'Hippocamposeptal' ? 20 :
-                                                                                        y === 'Cck Cxcl14+' ? 21 :
-                                                                                            y === 'Cck Vip Cxcl14-' ? 22 :
-                                                                                                y === 'Cck Cxcl14-' ? 23 :
-                                                                                                    y === 'Unidentified' ? 24 :
-                                                                                                        y === 'Cck Vip Cxcl14+' ? 25 :
-                                                                                                            y === 'Cck Calb1/Slc17a8*' ? 26 :
-                                                                                                                y === 'Backprojection' ? 27 :
-                                                                                                                    y === 'IS2' ? 28 :
-                                                                                                                        29;
-    }
 
 
     var chartData = {};
@@ -157,7 +126,6 @@ function section() {
     chartData.renderYAxis = renderYAxis;
     chartData.renderXGridline = renderXGridline;
     chartData.renderYGridline = renderYGridline;
-    chartData.renderOrder = renderOrder;
     chartData.tsn = tsn;
     chartData.pointRadius = pointRadius;
     chartData.scale = scale;
@@ -165,8 +133,6 @@ function section() {
     chartData.xTicks = xTicks;
     chartData.yTicks = yTicks;
     chartData.gridlines = gridlines;
-    // chartData.colorRamp = colorRamp;
-    // chartData.colorMap = colorMap;
     chartData.zoom = zoom;
     chartData.tooltip = tooltip;
     chartData.xGrid = xGrid;
@@ -176,59 +142,6 @@ function section() {
     return chartData
 }
 
-function aggregator(data) {
-    var out;
-    out = d3.nest()
-        .key(function (d) {
-            return d.IdentifiedType;
-        }) //group by IdentifiedType
-        .rollup(function (leaves) {
-            return {
-                Prob: d3.sum(leaves, function (d) {
-                    return d.Prob;
-                }), //sum all the values with the same IdentifiedType
-                color: leaves[0].color //Get the first color code. All codes with the same IdentifiedType are the same anyway
-            }
-        }).entries(data)
-        .map(function (d) {
-            return {IdentifiedType: d.key, Prob: d.value.Prob, color: d.value.color};
-        });
-
-    // sort in decreasing order
-    out.sort(function (x, y) {
-        return d3.ascending(y.Prob, x.Prob);
-    })
-
-    return out
-}
-
-function dataManager(sectionFeatures, data) {
-    var chartData = [];
-    for (var i = 0; i < data.length; ++i) {
-        var temp = [];
-        for (var j = 0; j < data[i].ClassName.length; ++j) {
-            console.log(data[i].ClassName[j])
-            temp.push({
-                IdentifiedType: sectionFeatures.colorMap.get(data[i].ClassName[j]).IdentifiedType,
-                color: sectionFeatures.colorMap.get(data[i].ClassName[j]).color,
-                Prob: data[i].Prob[j]? data[i].Prob[j]: [data[i].Prob] //Maybe that one is better
-            })
-        }
-        var agg = aggregator(temp);
-        chartData.push({
-            x: data[i].x,
-            y: data[i].y,
-            GeneCountTotal: data[i].CellGeneCount.reduce((a, b) => a + b, 0), //get the sum of all the elements in the array
-            IdentifiedType: agg[0].IdentifiedType,
-            color: agg[0].color,
-            Prob: agg[0].Prob,
-            renderOrder: sectionFeatures.renderOrder(agg[0].IdentifiedType),
-
-        })
-    }
-
-    return chartData
-}
 
 var sectionFeatures; // This is now a global variable!
 function sectionChart(data) {
@@ -242,17 +155,6 @@ function sectionChart(data) {
 
     svg = sectionFeatures.svg;
 
-    var managedData = dataManager(sectionFeatures, data)
-
-    //update now data with a managedData property
-    for (var i = 0; i < data.length; ++i) {
-        data[i].managedData = managedData[i]
-    }
-
-    // sort in ascending order
-    data.sort(function (x, y) {
-        return d3.ascending(x.managedData.renderOrder, y.managedData.renderOrder);
-    })
 
     // var extent = {
     //     x: d3.extent(data, function (d) {
@@ -339,7 +241,6 @@ function sectionChart(data) {
                             .on('mouseleave', () => {
                                 // hide the highlight circle when the mouse leaves the chart
                                 console.log('mouse leave');
-                                dapiConfig.map.removeLayer(voronoiMarker);
                                 highlight(null);
                             });
 
@@ -403,11 +304,11 @@ function sectionChart(data) {
         // .transition(d3.transition().duration(500))
         // .transition().duration(500)
         .attr('class', 'dotOnScatter')
-        .attr('id', d => 'Cell_Num_' + d.Cell_Num)
-        .attr('r', d => Math.sqrt(d.managedData.GeneCountTotal))
+        .attr('id', d => 'dot_num_' + d.dot_num)
+        .attr('r', d => d.radius)
         .attr('cx', d => sectionFeatures.scale.x(d.x))
         .attr('cy', d => sectionFeatures.scale.y(d.y))
-        .attr('fill', d => d.managedData.color)
+        .attr('fill', d => d3.rgb(d.r, d.g, d.b))
         .attr('fill-opacity', 0.85)
 
     update.exit().remove();
@@ -466,36 +367,9 @@ function sectionChart(data) {
         // highlight the point if we found one, otherwise hide the highlight circle
         highlight(site && site.data);
 
-        highlightDapi(site && site.data)
 
     }
 
-    function highlightDapi(d){
-
-        try {
-            dapiConfig.map.removeLayer(voronoiMarker)
-        }
-        catch(err) {
-            // do nothing
-        }
-
-        if(d){
-            styleVoronoiMarkers(d)
-        }
-    }
-
-    var styleVoronoiMarkers = function (d) {
-        var p = dapiConfig.t.transform(L.point([d.x, d.y]));
-        voronoiMarker = L.circleMarker([p.y, p.x], {
-            radius: 15,
-            fillColor: "orange",
-            color: "red",
-            weight: 1,
-            opacity: 1,
-            fillOpacity: 0.5,
-            interactive: false,
-        }).addTo(dapiConfig.map);
-    }
 
 // callback for when the mouse moves across the overlay
     function mouseClickHandler() {
@@ -513,36 +387,8 @@ function sectionChart(data) {
         // 1. highlight the point if we found one, otherwise hide the highlight circle
         highlight(site && site.data);
 
-        // 2.
-        updateDashboard(site && site.data)
-
-        // 3.
-        drawMarker(site && site.data)
-
     }
 
-    function drawMarker(d){
-        if (dapiConfig){
-            var p = dapiConfig.t.transform(L.point([d.x, d.y]));
-
-            try {
-                dapiConfig.map.removeLayer(voronoiMarker)
-            }
-            catch(err) {
-                // do nothing
-            }
-
-            voronoiMarker = L.circleMarker([p.y, p.x], {
-                radius: 15,
-                fillColor: "orange",
-                color: "red",
-                weight: 1,
-                opacity: 1,
-                fillOpacity: 0.5,
-                interactive: false,
-            }).addTo(dapiConfig.map);
-        }
-    }
 
     var prevHighlightDotNum = null;
 
@@ -555,28 +401,21 @@ function sectionChart(data) {
             sectionFeatures.tooltip.style("opacity", 0);
             // otherwise, show the highlight circle at the correct position
         } else {
-            if (prevHighlightDotNum !== d.Cell_Num) {
+            if (prevHighlightDotNum !== d.dot_num) {
                 d3.select('.highlight-circle')
                     .style('display', '')
-                    .style('stroke', 'tomato')
-                    .attr('fill', d.managedData.color)
+                    // .style('stroke', 'tomato')
+                    .attr('fill', d3.rgb(d.r, d.g, d.b))
                     .attr('cx', sectionFeatures.scale.x(d.x))
                     .attr('cy', sectionFeatures.scale.y(d.y))
-                    .attr("r", 1.2 * Math.sqrt(d.managedData.GeneCountTotal));
+                    .attr("r", 1.3 * d.radius);
 
                 // If event has be triggered from the scatter chart, so a tooltip
                 if (d3.event && d3.event.pageX) {
 
-                    var myHtml = '<h4 style="margin-top:0px; margin-bottom:1px"><b>' + d.managedData.IdentifiedType + '</b></h4>' +
-                        '<table style="width:95px;">' +
+                    var myHtml = '<table style="width:135px;">' +
                         '<tbody>' +
-                        '<tr style="width:95px; border-top:1px solid White; font-weight: bold">' +
-                        '<td><div>Probability: </div></td>' +
-                        '<td><div>' + Math.round(100 * d.managedData.Prob) / 100 + '</div></td>' +
-                        '</tr>' +
-                        '<tr class="">' +
-                        '<td><div>Gene Count:</div>' + '</td>' +
-                        '<td><div>' + Math.round(100 * d.managedData.GeneCountTotal) / 100 + '</div></td>' +
+                        '<td><div>' + d.description + '</div></td>' +
                         '</tr>' +
                         '</tbody>' +
                         '</table>'
@@ -591,24 +430,12 @@ function sectionChart(data) {
                         .style("top", (d3.event.pageY + 25) + "px");
 
                 }
-                prevHighlightDotNum = d.Cell_Num;
+                prevHighlightDotNum = d.dot_num;
             }
         }
     }
 
 
-    // use that to check counts per IdentifiedType and then set the renderOrder in such a manner that
-    // names which smaller counts (ie rarer) will be rendered on top of more frequent ones
-    var countData = d3.nest()
-        .key(function (d) {
-            return d.managedData.IdentifiedType
-        })
-        .rollup(function (leaves) {
-            return leaves.length
-        })
-        .entries(data)
-
     console.log('Finished Section Overview plot')
-    return data
 }
 

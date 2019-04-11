@@ -81,13 +81,14 @@
 
     <script>
         d3.csv("./src/data/DotTable.csv", function (data) {
-            data.forEach(function(d){
+            data.forEach(function(d, i){
                 d.x = + d.x;
                 d.y = + d.y;
                 d.r = + d.r;
                 d.g = + d.g;
                 d.b = + d.b;
                 d.radius = + d.radius;
+                d.dot_num = +i;
             });
             console.log('done')
             sectionChart(data)
