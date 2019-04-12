@@ -280,6 +280,12 @@ function sectionChart(data) {
     //     .attr("transform", "translate(4, 0)") // no idea why!
     //     .append("g");
 
+    var simulation = d3.forceSimulation(data)
+        .force('charge', d3.forceManyBody().strength(30))
+        .force('center', d3.forceCenter(0 / 2, 0 / 2))
+        .force('collision', d3.forceCollide().radius(0))
+        .on('tick', ticked);
+
     var dotsGroup = sectionFeatures.dotsGroup;
 
 
@@ -289,29 +295,33 @@ function sectionChart(data) {
     // because it will carry the styling from the highlight-circle
     // That styling is set to:
     // style="stroke: tomato; display: none;"
-    var update = dotsGroup.selectAll(".dotOnScatter").data(data);
 
-    // Note: Setting the transition here messes up the landing cell
-    // The DOM has the circles but without id, r, cx, cy and opacity.
-    // Not why, I think the function that sets the landing cell, grabs
-    // section chart too early, before it has been populated properly
-    // and that happens because of the transition (I think!!)
-    // Solution: set the transition in the CSS
-    update
-        .enter()
-        .append('circle')
-        .merge(update)
-        // .transition(d3.transition().duration(500))
-        // .transition().duration(500)
-        .attr('class', 'dotOnScatter')
-        .attr('id', d => 'dot_num_' + d.dot_num)
-        .attr('r', d => d.radius)
-        .attr('cx', d => sectionFeatures.scale.x(d.x))
-        .attr('cy', d => sectionFeatures.scale.y(d.y))
-        .attr('fill', d => d3.rgb(d.r, d.g, d.b))
-        .attr('fill-opacity', 0.85)
+    function ticked() {
 
-    update.exit().remove();
+        var update = dotsGroup.selectAll(".dotOnScatter").data(data);
+
+        // Note: Setting the transition here messes up the landing cell
+        // The DOM has the circles but without id, r, cx, cy and opacity.
+        // Not why, I think the function that sets the landing cell, grabs
+        // section chart too early, before it has been populated properly
+        // and that happens because of the transition (I think!!)
+        // Solution: set the transition in the CSS
+        update
+            .enter()
+            .append('circle')
+            .merge(update)
+            // .transition(d3.transition().duration(500))
+            // .transition().duration(500)
+            .attr('class', 'dotOnScatter')
+            .attr('id', d => 'dot_num_' + d.dot_num)
+            .attr('r', d => d.radius)
+            .attr('cx', d => sectionFeatures.scale.x(d.x))
+            .attr('cy', d => sectionFeatures.scale.y(d.y))
+            .attr('fill', d => d3.rgb(d.r, d.g, d.b))
+            .attr('fill-opacity', 0.85)
+
+        update.exit().remove();
+    }
 
     //
     d3.select('#dotsGroup').select('.highlight-rect').remove()
