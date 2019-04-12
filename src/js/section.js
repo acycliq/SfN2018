@@ -1,7 +1,7 @@
 function section() {
 
-    var totalWidth = 750,
-        totalHeight = 575;
+    var totalWidth = 1550,
+        totalHeight = 800;
 
     var margin = {
         top: 10,
@@ -185,7 +185,7 @@ function sectionChart(data) {
     function updateScales() {
         var extent = getExtent();
 
-        sectionFeatures.scale.x.domain([extent.x[0] * 0.99, extent.x[1] * 1.01]).nice()
+        sectionFeatures.scale.x.domain([extent.x[0] - 0.1, extent.x[1] + 0.1]).nice()
         sectionFeatures.scale.y.domain([extent.y[0] * 0.99, extent.y[1] * 1.01]).nice()
     }
 
