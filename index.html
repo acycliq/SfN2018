@@ -25,6 +25,7 @@
 
     <!-- User scripts  -->
     <script src='src/js/section.js'></script>
+    <script src='src/js/scatter.js'></script>
 
     <link rel="stylesheet" href="src/css/index.css">
 
@@ -63,9 +64,14 @@
                                         Map
                                     </div>
                                     <div class="chart-stage">
-                                         <div id="mymap" style="width: 100%;">
-                                            <svg></svg>
-                                        </div>
+                                          <div id="content">
+                                            <svg width="1500" height="800">
+                                              <g transform="translate(50, 100)"></g>
+                                            </svg>
+                                          </div>
+                                         <!--<div id="mymap" style="width: 100%;">-->
+                                            <!--<svg></svg>-->
+                                        <!--</div>-->
                                     </div>
                                 </div>
                             </div>
@@ -80,18 +86,21 @@
     </div><!-- tab-content -->
 
     <script>
-        d3.csv("./src/data/DotTable.csv", function (data) {
+        d3.csv("./src/data/data.csv", function (data) {
             data.forEach(function(d, i){
                 d.x = + d.x;
                 d.y = + d.y;
                 d.r = + d.r;
                 d.g = + d.g;
                 d.b = + d.b;
+                d.gx = + d.gx;
+                d.gy = + d.gy;
                 d.radius = + d.radius;
                 d.dot_num = +i;
             });
             console.log('done')
-            sectionChart(data)
+            // sectionChart(data)
+            scatter(data)
         },);
     </script>
 

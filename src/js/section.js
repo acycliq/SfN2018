@@ -281,10 +281,18 @@ function sectionChart(data) {
     //     .append("g");
 
     var simulation = d3.forceSimulation(data)
-        .force('charge', d3.forceManyBody().strength(30))
-        .force('center', d3.forceCenter(0 / 2, 0 / 2))
-        .force('collision', d3.forceCollide().radius(0))
+        .force('charge', d3.forceManyBody().strength(3))
+        .force('x', d3.forceX().x(function(d) {return sectionFeatures.scale.x(d.gx);}))
+        .force('y', d3.forceY().y(function(d) {return 0; }))
+        .force('collision', d3.forceCollide().radius(function(d) {return d.radius;}))
         .on('tick', ticked);
+
+
+    // var simulation = d3.forceSimulation(nodes)
+    //     .force('charge', d3.forceManyBody().strength(5))
+    //     .force('x', d3.forceX().x(function(d) {return xScale(d.value);}))
+    //     .force('y', d3.forceY().y(function(d) {return 0; }))
+    //     .force('collision', d3.forceCollide().radius(function(d) {return d.radius;}))
 
     var dotsGroup = sectionFeatures.dotsGroup;
 
