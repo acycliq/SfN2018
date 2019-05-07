@@ -80,6 +80,11 @@
     </div><!-- tab-content -->
 
     <script>
+        var rgbToHex = (r, g, b) => '#' + [r, g, b].map(x => {
+          const hex = x.toString(16)
+          return hex.length === 1 ? '0' + hex : hex
+        }).join('')
+
         d3.csv("./src/data/DotTable.csv", function (data) {
             data.forEach(function(d, i){
                 d.x = + d.x;
@@ -89,6 +94,8 @@
                 d.b = + d.b;
                 d.radius = + d.radius;
                 d.dot_num = +i;
+                d.hex = rgbToHex(d.r, d.g, d.b);
+                d.label = d.description.substring(0,4);
             });
             console.log('done')
             sectionChart(data)
