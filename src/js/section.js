@@ -439,7 +439,69 @@ function sectionChart(data) {
         sectionFeatures.tooltip.style("opacity", 0);
     }
 
+    result = data.filter(function (a) {
+        var key = a.hex + '|' + a.label;
+        if (!this[key]) {
+            this[key] = true;
+            return true;
+        }
+    }, Object.create(null));
+
+    ///////////////////////////////////////////////////////////////////////////
+    ///////////////////////// Create the Legend////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////
+
+    //Legend
+    var legendMargin = {left: 5, top: 10, right: 5, bottom: 10},
+        legendWidth = 145,
+        legendHeight = 270;
+
+    var svgLegend = d3.select("#legend").append("svg")
+        .attr("width", (legendWidth + legendMargin.left + legendMargin.right))
+        .attr("height", (legendHeight + legendMargin.top + legendMargin.bottom));
+
+    var legendWrapper = svgLegend.append("g").attr("class", "legendWrapper")
+        .attr("transform", "translate(" + legendMargin.left + "," + legendMargin.top + ")");
+
+    var rectSize = 15, //dimensions of the colored square
+        rowHeight = 20, //height of a row in the legend
+        maxWidth = 144; //widht of each row
+
+    //Create container per rect/text pair
+    var legend = legendWrapper.selectAll('.legendSquare')
+        .data(color.range())
+        .enter().append('g')
+        .attr('class', 'legendSquare')
+        .attr("transform", function (d, i) {
+            return "translate(" + 0 + "," + (i * rowHeight) + ")";
+        })
+        .style("cursor", "pointer")
+        .on("mouseover", selectLegend(0.02))
+        .on("mouseout", selectLegend(opacityCircles));
+
+    //Non visible white rectangle behind square and text for better hover
+    legend.append('rect')
+        .attr('width', maxWidth)
+        .attr('height', rowHeight)
+        .style('fill', "white");
+    //Append small squares to Legend
+    legend.append('rect')
+        .attr('width', rectSize)
+        .attr('height', rectSize)
+        .style('fill', function (d) {
+            return d;
+        });
+    //Append text to Legend
+    legend.append('text')
+        .attr('transform', 'translate(' + 22 + ',' + (rectSize / 2) + ')')
+        .attr("class", "legendText")
+        .style("font-size", "10px")
+        .attr("dy", ".35em")
+        .text(function (d, i) {
+            return color.domain()[i];
+        });
+
+
 
     console.log('Finished Section Overview plot')
 }
-
