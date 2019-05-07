@@ -113,7 +113,7 @@ function section() {
     }
 
     // voronoi
-    var voronoi = d3.voronoi()
+    // var voronoi = d3.voronoi()
 
 
 
@@ -137,7 +137,7 @@ function section() {
     chartData.tooltip = tooltip;
     chartData.xGrid = xGrid;
     chartData.yGrid = yGrid;
-    chartData.voronoi = voronoi;
+    // chartData.voronoi = voronoi;
 
     return chartData
 }
@@ -283,6 +283,15 @@ function sectionChart(data) {
     var dotsGroup = sectionFeatures.dotsGroup;
 
 
+    if (d3.select('#dotsGroup').select('.highlight-circle').empty()){
+            sectionFeatures.dotsGroup
+                            .append('circle')
+                            .attr('class', 'highlight-circle')
+                            // .style('fill', '#FFCE00')
+                            .style('display', 'none')
+        }
+
+
     // Do the chart
     // Note: DO NOT do the usual selectAll('circle'). As new data are
     // pushed in, you will end-up with one circle not being shown
@@ -310,6 +319,8 @@ function sectionChart(data) {
         .attr('cy', d => sectionFeatures.scale.y(d.y))
         .attr('fill', d => d3.rgb(d.r, d.g, d.b))
         .attr('fill-opacity', 0.85)
+        .on("mouseover", highlight)
+        .on("mouseout", mouseout);
 
     update.exit().remove();
 
@@ -319,23 +330,12 @@ function sectionChart(data) {
         dotsGroup.append('rect').attr('class', 'highlight-rect')
     };
 
-    var voronoiDiagram = updateVoronoi(data);
+    // var voronoiDiagram = updateVoronoi(data);
 
-    //collect the coordinates of the circles and push the to the data object
-    var nodes = d3.selectAll('circle').nodes();
-    for (var i = 0; i < nodes.length; i++) {
-        if (nodes[i].getAttribute('class') === 'dotOnScatter') {
-            data[i].cx = +nodes[i].getAttribute('cx')
-            data[i].cy = +nodes[i].getAttribute('cy')
-        }
-    }
 
     sectionFeatures.zoom.on("zoom", zoomed);
 
     function zoomed() {
-        // d3.event.transform.x = d3.event.transform.x;
-        // d3.event.transform.y = d3.event.transform.y;
-
         // update: rescale x and y axes
         sectionFeatures.renderXAxis.call(sectionFeatures.axis.x.scale(d3.event.transform.rescaleX(sectionFeatures.scale.x)));
         sectionFeatures.renderYAxis.call(sectionFeatures.axis.y.scale(d3.event.transform.rescaleY(sectionFeatures.scale.y)));
@@ -344,8 +344,6 @@ function sectionChart(data) {
         sectionFeatures.yGrid.call(gridlines.y.scale(d3.event.transform.rescaleY(sectionFeatures.scale.y)));
 
         dotsGroup.attr("transform", d3.event.transform);
-        // xGrid.attr("transform", d3.event.transform);
-        // yGrid.attr("transform", d3.event.transform);
     }
 
 // callback for when the mouse moves across the overlay
@@ -404,7 +402,7 @@ function sectionChart(data) {
             if (prevHighlightDotNum !== d.dot_num) {
                 d3.select('.highlight-circle')
                     .style('display', '')
-                    // .style('stroke', 'tomato')
+                    .style('stroke', 'white')
                     .attr('fill', d3.rgb(d.r, d.g, d.b))
                     .attr('cx', sectionFeatures.scale.x(d.x))
                     .attr('cy', sectionFeatures.scale.y(d.y))
@@ -433,6 +431,12 @@ function sectionChart(data) {
                 prevHighlightDotNum = d.dot_num;
             }
         }
+    }
+
+    function mouseout(d){
+        d3.select('.highlight-circle').style('display', 'none');
+        prevHighlightDotNum = null;
+        sectionFeatures.tooltip.style("opacity", 0);
     }
 
 
