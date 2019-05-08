@@ -1,6 +1,6 @@
 function section() {
 
-    var totalWidth = 1550,
+    var totalWidth = 1100,
         totalHeight = 800;
 
     var margin = {
@@ -144,10 +144,11 @@ function section() {
 
 
 var sectionFeatures; // This is now a global variable!
-function sectionChart(data) {
+function clusterChart(data) {
 
-    console.log('Doing Section Overview plot')
-
+    console.log('Doing Cluster Map')
+    var opacityOn = 0.8,
+        opacityOff = 0.02;
     var svg = d3.select('#scatter-plot').select("svg")
     if (svg.select('#sectionChartGroup').empty()) {
         sectionFeatures = section()
@@ -204,55 +205,6 @@ function sectionChart(data) {
         sectionFeatures.axis.y = d3.axisLeft(sectionFeatures.scale.y).ticks(sectionFeatures.yTicks).tickSizeOuter(0);
     }
 
-    function updateVoronoi(data){
-        var v =  sectionFeatures.voronoi
-                    .x(d => sectionFeatures.scale.x(d.x))
-                    .y(d => sectionFeatures.scale.y(d.y))
-                    .size([sectionFeatures.width, sectionFeatures.height])(data);
-
-        // Is this how it should be done? Do I have to remove them each time?
-        // highlight circle and sectionOverlay must be on top of everything else. Hence they
-        // should be rendered last. Especially when using filters on the section chart you need to guarantee
-        // that these are drawn at very end, otherwise they wont work properly.
-        // Draw the highlight circle
-        d3.select('#dotsGroup').select('.highlight-circle').remove()
-        if (d3.select('#dotsGroup').select('.highlight-circle').empty()){
-            sectionFeatures.dotsGroup
-                            .append('circle')
-                            .attr('class', 'highlight-circle')
-                            // .style('fill', '#FFCE00')
-                            .style('display', 'none')
-        }
-        d3.select('#dotsGroup')
-            .select('.highlight-circle')
-            .attr('r', sectionFeatures.pointRadius * 2);
-
-        // Now draw the overlay on top of everything to take the mouse events
-        d3.select('#dotsGroup').select('#sectionOverlay').remove()
-        if (d3.select('#dotsGroup').select('#sectionOverlay').empty()){
-            sectionFeatures.dotsGroup
-                            .append('rect')
-                            .attr('class', 'overlay')
-                            .attr('id', 'sectionOverlay')
-                            // .style('fill', '#FFCE00')
-                            .style('opacity', 0)
-                            .on('click', mouseClickHandler)
-                            .on('mousemove', mouseMoveHandler)
-                            .on('mouseleave', () => {
-                                // hide the highlight circle when the mouse leaves the chart
-                                console.log('mouse leave');
-                                highlight(null);
-                            });
-
-        }
-        d3.select('#dotsGroup')
-            .select('#sectionOverlay')
-            .attr('width', sectionFeatures.width)
-            .attr('height', sectionFeatures.height)
-
-        //Finally return the voronoi
-        return v
-    }
 
     updateScales();
     updateAxes();
@@ -318,7 +270,7 @@ function sectionChart(data) {
         .attr('cx', d => sectionFeatures.scale.x(d.x))
         .attr('cy', d => sectionFeatures.scale.y(d.y))
         .attr('fill', d => d3.rgb(d.r, d.g, d.b))
-        .attr('fill-opacity', 0.85)
+        .attr('fill-opacity', opacityOn)
         .on("mouseover", highlight)
         .on("mouseout", mouseout);
 
@@ -344,47 +296,6 @@ function sectionChart(data) {
         sectionFeatures.yGrid.call(gridlines.y.scale(d3.event.transform.rescaleY(sectionFeatures.scale.y)));
 
         dotsGroup.attr("transform", d3.event.transform);
-    }
-
-// callback for when the mouse moves across the overlay
-    function mouseMoveHandler() {
-        // make sure you hide the rect
-        d3.select('.highlight-rect')
-            .attr("width", 0)
-            .attr("height",0)
-            .attr('opacity', 0)
-
-        // get the current mouse position
-        const [mx, my] = d3.mouse(this);
-
-        // use the new diagram.find() function to find the voronoi site closest to
-        // the mouse, limited by max distance defined by voronoiRadius
-        //const site = voronoiDiagram.find(mx, my, voronoiRadius);
-        const site = voronoiDiagram.find(mx, my);
-
-        // highlight the point if we found one, otherwise hide the highlight circle
-        highlight(site && site.data);
-
-
-    }
-
-
-// callback for when the mouse moves across the overlay
-    function mouseClickHandler() {
-        console.log('pageX is: ' + d3.event.pageX)
-        console.log('pageY is: ' + d3.event.pageY)
-
-        // get the current mouse position
-        const [mx, my] = d3.mouse(this);
-
-        // use the new diagram.find() function to find the voronoi site closest to
-        // the mouse, limited by max distance defined by voronoiRadius
-        //const site = voronoiDiagram.find(mx, my, voronoiRadius);
-        const site = voronoiDiagram.find(mx, my);
-
-        // 1. highlight the point if we found one, otherwise hide the highlight circle
-        highlight(site && site.data);
-
     }
 
 
@@ -439,7 +350,15 @@ function sectionChart(data) {
         sectionFeatures.tooltip.style("opacity", 0);
     }
 
-    result = data.filter(function (a) {
+    var colorConfig = [];
+    for (var i = 0; i < data.length; i++) {
+        colorConfig.push({
+            "hex": data[i].hex,
+            "label": data[i].label,
+        })
+    }
+
+    colorConfig = colorConfig.filter(function (a) {
         var key = a.hex + '|' + a.label;
         if (!this[key]) {
             this[key] = true;
@@ -451,12 +370,17 @@ function sectionChart(data) {
     ///////////////////////// Create the Legend////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////
 
+    // set the color
+    var color = d3.scaleOrdinal()
+        .range(colorConfig.map(a => a.hex))
+        .domain(colorConfig.map(a => a.label))
+
     //Legend
     var legendMargin = {left: 5, top: 10, right: 5, bottom: 10},
-        legendWidth = 145,
+        legendWidth = 310,
         legendHeight = 270;
 
-    var svgLegend = d3.select("#legend").append("svg")
+    var svgLegend = d3.select("#legend_A").append("svg")
         .attr("width", (legendWidth + legendMargin.left + legendMargin.right))
         .attr("height", (legendHeight + legendMargin.top + legendMargin.bottom));
 
@@ -465,7 +389,7 @@ function sectionChart(data) {
 
     var rectSize = 15, //dimensions of the colored square
         rowHeight = 20, //height of a row in the legend
-        maxWidth = 144; //widht of each row
+        maxWidth = legendWidth; //width of each row
 
     //Create container per rect/text pair
     var legend = legendWrapper.selectAll('.legendSquare')
@@ -476,8 +400,9 @@ function sectionChart(data) {
             return "translate(" + 0 + "," + (i * rowHeight) + ")";
         })
         .style("cursor", "pointer")
-        .on("mouseover", selectLegend(0.02))
-        .on("mouseout", selectLegend(opacityCircles));
+        .on("mouseover", selectLegend(opacityOff))
+        .on("mouseout", selectLegend(opacityOn))
+        .on("click", clickLegend);
 
     //Non visible white rectangle behind square and text for better hover
     legend.append('rect')
@@ -501,7 +426,62 @@ function sectionChart(data) {
             return color.domain()[i];
         });
 
+    function clickLegend(d, i){
+        console.log('legend was clicked');
+        event.stopPropagation();
+
+        //deactivate the mouse over and mouse out events
+        d3.selectAll(".legendSquare")
+            .on("mouseover", null)
+            .on("mouseout", null);
+
+        //Chosen legend item
+        var chosen = color.domain()[i];
+
+        //Only show the circles of the chosen one
+        dotsGroup.selectAll(".dotOnScatter")
+		.style("opacity", opacityOn)
+		.style("visibility", function(d) {
+			if (d.label != chosen) return "hidden";
+			else return "visible";
+		});
+    }
+
+    //Show all the cirkels again when clicked outside legend
+    function resetClick() {
+
+        //Activate the mouse over and mouse out events of the legend
+        d3.selectAll(".legendSquare")
+            .on("mouseover", selectLegend(opacityOff))
+            .on("mouseout", selectLegend(opacityOn));
+
+        //Show all circles
+        dotsGroup.selectAll(".dotOnScatter")
+            .style("opacity", opacityOn)
+            .style("visibility", "visible");
+
+    }//resetClick
+
+    //Reset the click event when the user clicks anywhere but the legend
+    d3.select("body").on("click", resetClick);
+
+    ///////////////////////////////////////////////////////////////////////////
+    //////////////////// Hover function for the legend ////////////////////////
+    ///////////////////////////////////////////////////////////////////////////
+
+    //Decrease opacity of non selected circles when hovering in the legend
+    function selectLegend(opacity) {
+        return function(d, i) {
+            var chosen = color.domain()[i];
+
+            dotsGroup.selectAll(".dotOnScatter")
+                .filter(function(d) { return d.label != chosen; })
+                .transition()
+                .style("opacity", opacity);
+          };
+    }//function selectLegend
 
 
-    console.log('Finished Section Overview plot')
+
+    console.log('Finished!')
 }

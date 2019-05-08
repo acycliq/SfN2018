@@ -40,7 +40,7 @@
         <div class="container-fluid">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Neuro crowds</a>
+                    <a class="navbar-brand" href="#">The Structure of Neuroscience</a>
                 </div>
             </div><!--/.container-fluid -->
         </div>
@@ -57,10 +57,10 @@
                     <div class="row" style="margin-top:5px">
                         <div class="col-sm-12">
                             <!-- Map -->
-                            <div class="col-sm-12">
+                            <div class="col-sm-8">
                                 <div class="chart-wrapper">
                                     <div class="chart-title">
-                                        Map
+                                        Cluster Map
                                     </div>
                                     <div class="chart-stage">
                                          <div id="mymap" style="width: 100%;">
@@ -68,6 +68,16 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="legendTitle" style="font-size: 12px;">GROUP</div>
+				                <div class="legendText" style="font-size: 11px; color: #BABABA;">click to select all subjects within a category</div>
+				                <div id="legend_A"></div>
+
+                                <div class="legendTitle" style="font-size: 12px;">GROUP</div>
+				                <div class="legendText" style="font-size: 11px; color: #BABABA;">click to select all subjects within a category</div>
+				                <div id="legend_B"></div>
+
                             </div>
                             <!-- Map -->
                         </div>
@@ -85,7 +95,7 @@
           return hex.length === 1 ? '0' + hex : hex
         }).join('')
 
-        d3.csv("./src/data/DotTable.csv", function (data) {
+        d3.csv("./src/data/data.csv", function (data) {
             data.forEach(function(d, i){
                 d.x = + d.x;
                 d.y = + d.y;
@@ -95,10 +105,10 @@
                 d.radius = + d.radius;
                 d.dot_num = +i;
                 d.hex = rgbToHex(d.r, d.g, d.b);
-                d.label = d.description.substring(0,4);
+                d.label = d.group;
             });
             console.log('done')
-            sectionChart(data)
+            clusterChart(data)
         },);
     </script>
 
