@@ -372,6 +372,7 @@ function clusterChart(data) {
     legend("#legend_A", 'A', 200)
     legend("#legend_B", 'B', 260)
     legend("#legend_C", 'C', 220)
+    legend("#legend_D", 'D', 200)
 
 
 

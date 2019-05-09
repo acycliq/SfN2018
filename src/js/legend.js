@@ -121,6 +121,10 @@ function resetClick() {
         .on("mouseover", selectLegend(opacityOff))
         .on("mouseout", selectLegend(opacityOn));
 
+    d3.select("#legend_D").selectAll(".legendSquare")
+        .on("mouseover", selectLegend(opacityOff))
+        .on("mouseout", selectLegend(opacityOn));
+
     //Show all circles
     dotsGroup.selectAll(".dotOnScatter")
         .style("opacity", opacityOn)
