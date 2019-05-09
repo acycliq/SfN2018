@@ -46,7 +46,8 @@ function legend(div_id, group_id, legendHeight) {
         .style("cursor", "pointer")
         .on("mouseover", selectLegend(opacityOff))
         .on("mouseout", selectLegend(opacityOn))
-        .on("click", clickLegend);
+        .on("click", clickLegend)
+        .on("dblclick", dblclickLegend);
 
     //Non visible white rectangle behind square and text for better hover
     legend.append('rect')
@@ -103,6 +104,24 @@ function clickLegend(d, i) {
             if (d.label != chosen) return "hidden";
             else return "visible";
         });
+}
+
+function dblclickLegend(d, i){
+    console.log('Double clicked!')
+    event.stopPropagation();
+
+    //deactivate the mouse over and mouse out events
+    d3.selectAll(".legendSquare")
+        .on("mouseover", null)
+        .on("mouseout", null);
+
+    dotsGroup.selectAll(".dotOnScatter")
+        .style("opacity", opacityOn)
+        .style("visibility", function (el) {
+            if (el.hex != d) return "hidden";
+            else return "visible";
+        });
+
 }
 
 //Show all the cirkels again when clicked outside legend
