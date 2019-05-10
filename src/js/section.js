@@ -1,11 +1,11 @@
 function section() {
 
-    var totalWidth = 1100,
+    var totalWidth = 1500,
         totalHeight = 800;
 
     var margin = {
         top: 10,
-        left: 50,
+        left: 350,
         bottom: 30,
         right: 0
     }
