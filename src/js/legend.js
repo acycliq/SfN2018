@@ -124,6 +124,10 @@ function dblclickLegend(d, i){
 
 }
 
+function headerClick(){
+    console.log('header was clicked')
+}
+
 //Show all the cirkels again when clicked outside legend
 function resetClick() {
 
