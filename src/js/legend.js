@@ -53,7 +53,7 @@ function legend(div_id, group_id, legendHeight) {
     legend.append('rect')
         .attr('width', maxWidth)
         .attr('height', rowHeight)
-        .style('fill', "white");
+        .style('fill', 'rgba(255, 255, 255, 0)');
     //Append small squares to Legend
     legend.append('rect')
         .attr('width', rectSize)
