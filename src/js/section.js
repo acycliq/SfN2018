@@ -369,10 +369,15 @@ function clusterChart(data) {
         }
     }, Object.create(null));
 
-    legend("#legend_A", 'A', 200)
-    legend("#legend_B", 'B', 260)
-    legend("#legend_C", 'C', 220)
-    legend("#legend_D", 'D', 200)
+    legend("#legend_A", 'A', 300, 230)
+    legend("#legend_B", 'B', 300, 260)
+    legend("#legend_C", 'C', 280, 220)
+    legend("#legend_D", 'D', 280, 180)
+    legend("#legend_E", 'E', 280, 180)
+    legend("#legend_F", 'F', 280, 200)
+    legend("#legend_G", 'G', 280, 200)
+    legend("#legend_H", 'H', 280, 200)
+    legend("#legend_I", 'I', 280, 150)
 
 
 
