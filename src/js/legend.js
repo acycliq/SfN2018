@@ -3,7 +3,7 @@
 ///////////////////////////////////////////////////////////////////////////
 var color,
     opacityOn = 0.8,
-    opacityOff = 0.02;
+    opacityOff = 0.2;
 
 function legend(div_id, group_id, legendWidth, legendHeight) {
     // id: "#legend_A"
@@ -100,9 +100,9 @@ function clickLegend(d, i) {
     //Only show the circles of the chosen one
     dotsGroup.selectAll(".dotOnScatter")
         .style("opacity", opacityOn)
-        .style("visibility", function (d) {
-            if (d.label != chosen) return "hidden";
-            else return "visible";
+        .style("opacity", function (d) {
+            if (d.label != chosen) return opacityOff;
+            else return opacityOn;
         });
 }
 
@@ -141,6 +141,26 @@ function resetClick() {
         .on("mouseout", selectLegend(opacityOn));
 
     d3.select("#legend_D").selectAll(".legendSquare")
+        .on("mouseover", selectLegend(opacityOff))
+        .on("mouseout", selectLegend(opacityOn));
+
+    d3.select("#legend_E").selectAll(".legendSquare")
+        .on("mouseover", selectLegend(opacityOff))
+        .on("mouseout", selectLegend(opacityOn));
+
+    d3.select("#legend_F").selectAll(".legendSquare")
+        .on("mouseover", selectLegend(opacityOff))
+        .on("mouseout", selectLegend(opacityOn));
+
+    d3.select("#legend_G").selectAll(".legendSquare")
+        .on("mouseover", selectLegend(opacityOff))
+        .on("mouseout", selectLegend(opacityOn));
+
+    d3.select("#legend_H").selectAll(".legendSquare")
+        .on("mouseover", selectLegend(opacityOff))
+        .on("mouseout", selectLegend(opacityOn));
+
+    d3.select("#legend_I").selectAll(".legendSquare")
         .on("mouseover", selectLegend(opacityOff))
         .on("mouseout", selectLegend(opacityOn));
 
