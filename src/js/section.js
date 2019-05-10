@@ -1,11 +1,11 @@
 function section() {
 
-    var totalWidth = 1500,
+    var totalWidth = screen.width,
         totalHeight = 800;
 
     var margin = {
         top: 10,
-        left: 350,
+        left: 50,
         bottom: 30,
         right: 0
     }
@@ -189,8 +189,8 @@ function clusterChart(data) {
     function updateScales() {
         var extent = getExtent();
 
-        sectionFeatures.scale.x.domain([extent.x[0] - 0.1, extent.x[1] + 0.1]).nice()
-        sectionFeatures.scale.y.domain([extent.y[0] * 0.99, extent.y[1] * 1.01]).nice()
+        sectionFeatures.scale.x.domain([extent.x[0] - 20, extent.x[1] + 30]).nice()
+        sectionFeatures.scale.y.domain(extent.y).nice()
     }
 
     var gridlines = {
