@@ -5,7 +5,7 @@ var color,
     opacityOn = 0.8,
     opacityOff = 0.02;
 
-function legend(div_id, group_id, legendHeight) {
+function legend(div_id, group_id, legendWidth, legendHeight) {
     // id: "#legend_A"
     var legendData = [];
 
@@ -20,8 +20,8 @@ function legend(div_id, group_id, legendHeight) {
     legendData.group_id = group_id;
 
     //Legend
-    var legendMargin = {left: 5, top: 10, right: 5, bottom: 10},
-        legendWidth = 310;
+    var legendMargin = {left: 5, top: 10, right: 5, bottom: 10};
+        // legendWidth = 310;
         // legendHeight = 270;
 
     var svgLegend = d3.select(div_id).append("svg")
