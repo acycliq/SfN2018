@@ -222,7 +222,7 @@ function selectLegend(opacity) {
 
 function mouseover() {
     return function (d, i) {
-        console.log(d)
+        // console.log(d)
         var legendColor = colorConfig.filter(el => el.hex === d)
         // set the color
         var color = d3.scaleOrdinal()
