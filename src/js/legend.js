@@ -129,8 +129,25 @@ function dblclickLegend(d, i){
 
 }
 
-function headerClick(){
-    console.log('header was clicked')
+function headerClick(hex){
+    console.log('header was clicked');
+    event.stopPropagation();
+
+    //deactivate the mouse over and mouse out events
+    d3.selectAll(".legendSquare")
+        .on("mouseover", null)
+        .on("mouseout", null);
+
+    dotsGroup.selectAll(".dotOnScatter")
+        .style('stroke', 'black')
+        .style("stroke-width", function (d) {
+            if (d.hex != hex) return 0;
+            else return 2;
+        })
+        .style("opacity", function (d) {
+            if (d.hex != hex) return opacityOff;
+            else return opacityOn;
+        });
 }
 
 //Show all the cirkels again when clicked outside legend
