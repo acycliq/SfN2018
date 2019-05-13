@@ -44,8 +44,8 @@ function legend(div_id, group_id, legendWidth, legendHeight) {
             return "translate(" + 0 + "," + (i * rowHeight) + ")";
         })
         .style("cursor", "pointer")
-        .on("mouseover", selectLegend(opacityOff))
-        .on("mouseout", selectLegend(opacityOn))
+        .on("mouseover", mouseover())
+        .on("mouseout", mouseout())
         .on("click", clickLegend)
         .on("dblclick", dblclickLegend);
 
@@ -99,6 +99,11 @@ function clickLegend(d, i) {
 
     //Only show the circles of the chosen one
     dotsGroup.selectAll(".dotOnScatter")
+        .attr('r', d => d.radius)
+        .style('stroke', 'black')
+        .style("stroke-width", function (d) {
+            if (d.label != chosen) return 0;
+            else return 2})
         .style("opacity", opacityOn)
         .style("opacity", function (d) {
             if (d.label != chosen) return opacityOff;
@@ -133,44 +138,45 @@ function resetClick() {
 
     //Activate the mouse over and mouse out events of the legend
     d3.select("#legend_A").selectAll(".legendSquare")
-        .on("mouseover", selectLegend(opacityOff))
-        .on("mouseout", selectLegend(opacityOn));
+        .on("mouseover", mouseover())
+        .on("mouseout", mouseout());
 
     d3.select("#legend_B").selectAll(".legendSquare")
-        .on("mouseover", selectLegend(opacityOff))
-        .on("mouseout", selectLegend(opacityOn));
+        .on("mouseover", mouseover())
+        .on("mouseout", mouseout());
 
     d3.select("#legend_C").selectAll(".legendSquare")
-        .on("mouseover", selectLegend(opacityOff))
-        .on("mouseout", selectLegend(opacityOn));
+        .on("mouseover", mouseover())
+        .on("mouseout", mouseout());
 
     d3.select("#legend_D").selectAll(".legendSquare")
-        .on("mouseover", selectLegend(opacityOff))
-        .on("mouseout", selectLegend(opacityOn));
+        .on("mouseover", mouseover())
+        .on("mouseout", mouseout());
 
     d3.select("#legend_E").selectAll(".legendSquare")
-        .on("mouseover", selectLegend(opacityOff))
-        .on("mouseout", selectLegend(opacityOn));
+        .on("mouseover", mouseover())
+        .on("mouseout", mouseout());
 
     d3.select("#legend_F").selectAll(".legendSquare")
-        .on("mouseover", selectLegend(opacityOff))
-        .on("mouseout", selectLegend(opacityOn));
+        .on("mouseover", mouseover())
+        .on("mouseout", mouseout());
 
     d3.select("#legend_G").selectAll(".legendSquare")
-        .on("mouseover", selectLegend(opacityOff))
-        .on("mouseout", selectLegend(opacityOn));
+        .on("mouseover", mouseover())
+        .on("mouseout", mouseout());
 
     d3.select("#legend_H").selectAll(".legendSquare")
-        .on("mouseover", selectLegend(opacityOff))
-        .on("mouseout", selectLegend(opacityOn));
+        .on("mouseover", mouseover())
+        .on("mouseout", mouseout());
 
     d3.select("#legend_I").selectAll(".legendSquare")
-        .on("mouseover", selectLegend(opacityOff))
-        .on("mouseout", selectLegend(opacityOn));
+        .on("mouseover", mouseover())
+        .on("mouseout", mouseout());
 
     //Show all circles
     dotsGroup.selectAll(".dotOnScatter")
         .style("opacity", opacityOn)
+        .style('stroke-width', 0)
         .style("visibility", "visible");
 
 }//resetClick
@@ -182,7 +188,41 @@ function resetClick() {
 
 //Decrease opacity of non selected circles when hovering in the legend
 function selectLegend(opacity) {
+    var chosen;
     return function (d, i) {
+        console.log(d)
+        var legendColor = colorConfig.filter(el => el.hex === d)
+        // set the color
+        var color = d3.scaleOrdinal()
+            .range(legendColor.map(a => a.hex))
+            .domain(legendColor.map(a => a.label))
+
+        chosen = color.domain()[i];
+
+        dotsGroup.selectAll(".dotOnScatter")
+            .filter(function (d) {
+                return d.label != chosen;
+            })
+            .transition()
+            .attr('r', d => d.radius)
+            .style("opacity", opacity);
+
+        dotsGroup.selectAll(".dotOnScatter")
+            .filter(function (d) {
+                return d.label === chosen;
+            })
+            .transition()
+            .attr('r', d => d.radius)
+            .style("opacity", opacityOn);
+
+        // pulseMe(chosen)
+    };
+}//function selectLegend
+
+
+function mouseover() {
+    return function (d, i) {
+        console.log(d)
         var legendColor = colorConfig.filter(el => el.hex === d)
         // set the color
         var color = d3.scaleOrdinal()
@@ -196,7 +236,65 @@ function selectLegend(opacity) {
                 return d.label != chosen;
             })
             .transition()
-            .style("opacity", opacity);
+            .style('stroke', 'black')
+            .style("stroke-width", 0)
+            .attr('r', d => d.radius)
+            .style("opacity", opacityOff);
+
+        dotsGroup.selectAll(".dotOnScatter")
+            .filter(function (d) {
+                return d.label === chosen;
+            })
+            .transition()
+            .style('stroke', 'black')
+            .style("stroke-width", 2)
+            .attr('r', d => d.radius * 1.5)
+            .style("opacity", opacityOn);
+
+        // pulseMe(chosen)
     };
 }//function selectLegend
 
+
+function mouseout() {
+    return function (d, i) {
+        dotsGroup.selectAll(".dotOnScatter")
+            .transition()
+            .style('stroke', 'black')
+            .attr("stroke-width", 0)
+            .attr('r', d => d.radius)
+            .style("opacity", opacityOn);
+
+    };
+}//function selectLegend
+
+
+function pulseMe(chosen) {
+    d3.selectAll('.dotOnScatter').each(
+        function (d) {
+            if (d.label === chosen) { //selects the circle I want to pulse, since there's lots of fixed circles
+
+                //this correctly returns the stroke-width of the circle I want to pulse
+                var currentRadius = d3.select(this).attr("r");
+
+                //if I un-comment this, it will correctly update the circle I want to pulse
+                //d3.select(this).transition().duration(500).attr('stroke-width', 15);
+
+                var theCircle = d3.select(this);
+
+                repeat();
+
+                function repeat() {
+                    theCircle = theCircle.transition()
+                        .duration(500)
+                        .attr("r", currentRadius + 2)
+                        .transition()
+                        .duration(500)
+                        .attr('r', currentRadius)
+                        // .ease('sine')
+                        .each("end", repeat);
+                }
+            }
+        }
+    );
+}
