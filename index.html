@@ -77,6 +77,43 @@
 
 <body class="application" id="body">
 
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-md">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h2 class="modal-title">Charting the Structure of Neuroscience</h2>
+            </div>
+            <div class="modal-body">
+
+                <p>
+                    This visualisation shows the itineraries of 8,329 attendees at the 2018 SfN meeting.
+                    Each dot represents a topic with size indicative of its popularity
+                </p>
+
+
+                <p>
+                Credits:
+                    <ul type="square">
+                        <li>Analysis and Data: Carandini, M. <a href="https://figshare.com/articles/Charting_the_Structure_of_Neuroscience/8061401/1" target="_blank">Charting the Structure of Neuroscience.</a> Figshare (2019).
+                        </li>
+                        <li>Web visualization: Dimitris Nicoloutsoupoulos</li>
+                    </ul>
+                </p>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
 
 <!-- main page container, holding the nav tabs and content -->
 <div id="container">
@@ -86,6 +123,10 @@
                 <div class="navbar-header">
                     <a class="navbar-brand" href="#">The Structure of Neuroscience</a>
                 </div>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a data-target="#myModal" data-toggle="modal" href="#myModal">About</a></li>
+                </ul>
             </div><!--/.container-fluid -->
         </div>
     </div>
