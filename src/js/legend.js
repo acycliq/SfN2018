@@ -251,7 +251,6 @@ function mouseover() {
             .attr('r', d => d.radius * 1.5)
             .style("opacity", opacityOn);
 
-        // pulseMe(chosen)
     };
 }//function selectLegend
 
@@ -268,33 +267,3 @@ function mouseout() {
     };
 }//function selectLegend
 
-
-function pulseMe(chosen) {
-    d3.selectAll('.dotOnScatter').each(
-        function (d) {
-            if (d.label === chosen) { //selects the circle I want to pulse, since there's lots of fixed circles
-
-                //this correctly returns the stroke-width of the circle I want to pulse
-                var currentRadius = d3.select(this).attr("r");
-
-                //if I un-comment this, it will correctly update the circle I want to pulse
-                //d3.select(this).transition().duration(500).attr('stroke-width', 15);
-
-                var theCircle = d3.select(this);
-
-                repeat();
-
-                function repeat() {
-                    theCircle = theCircle.transition()
-                        .duration(500)
-                        .attr("r", currentRadius + 2)
-                        .transition()
-                        .duration(500)
-                        .attr('r', currentRadius)
-                        // .ease('sine')
-                        .each("end", repeat);
-                }
-            }
-        }
-    );
-}
