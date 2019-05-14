@@ -109,6 +109,8 @@ function clickLegend(d, i) {
             if (d.label != chosen) return opacityOff;
             else return opacityOn;
         });
+
+    groupLabelHandler(chosen)
 }
 
 function dblclickLegend(d, i){
@@ -268,22 +270,27 @@ function mouseover() {
             .attr('r', d => d.radius * 1.5)
             .style("opacity", opacityOn);
 
-        dotsGroup.selectAll(".groupLabel")
-            .filter(function (d) {
-                return d.label != chosen;
-            })
-            .transition()
-            .style("opacity", opacityOff);
-
-        dotsGroup.selectAll(".groupLabel")
-            .filter(function (d) {
-                return d.label === chosen;
-            })
-            .transition()
-            .style("opacity", opacityOn);
+        groupLabelHandler(chosen)
 
     };
-}//function selectLegend
+}//function mouseover
+
+
+function groupLabelHandler(chosen) {
+    dotsGroup.selectAll(".groupLabel")
+        .filter(function (d) {
+            return d.label != chosen;
+        })
+        .transition()
+        .style("opacity", 0.0);
+
+    dotsGroup.selectAll(".groupLabel")
+        .filter(function (d) {
+            return d.label === chosen;
+        })
+        .transition()
+        .style("opacity", opacityOn);
+}
 
 
 function mouseout() {
