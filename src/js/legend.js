@@ -150,6 +150,8 @@ function headerClick(hex){
             if (d.hex != hex) return opacityOff;
             else return opacityOn;
         });
+
+    groupLabelHandler('dummy')
 }
 
 //Show all the cirkels again when clicked outside legend
