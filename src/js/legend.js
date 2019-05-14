@@ -268,6 +268,20 @@ function mouseover() {
             .attr('r', d => d.radius * 1.5)
             .style("opacity", opacityOn);
 
+        dotsGroup.selectAll(".groupLabel")
+            .filter(function (d) {
+                return d.label != chosen;
+            })
+            .transition()
+            .style("opacity", opacityOff);
+
+        dotsGroup.selectAll(".groupLabel")
+            .filter(function (d) {
+                return d.label === chosen;
+            })
+            .transition()
+            .style("opacity", opacityOn);
+
     };
 }//function selectLegend
 

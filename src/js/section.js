@@ -255,6 +255,17 @@ function clusterChart(data) {
     // style="stroke: tomato; display: none;"
     var update = dotsGroup.selectAll(".dotOnScatter").data(data);
 
+    update.enter()
+            .append("text")
+            .attr('class', 'groupLabel')
+            .attr("x", d => sectionFeatures.scale.x(+d.gx))
+            .attr("y", d => sectionFeatures.scale.y(+d.gy)) //set your y attribute here
+            .style("text-anchor", "middle")
+            .style("font-size", "12px")
+            .style('fill',  d => d3.rgb(d.r, d.g, d.b))
+            .attr('opacity', opacityOn)
+            .text(d => d.group);
+
     // Note: Setting the transition here messes up the landing cell
     // The DOM has the circles but without id, r, cx, cy and opacity.
     // Not why, I think the function that sets the landing cell, grabs
