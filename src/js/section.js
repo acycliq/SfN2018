@@ -1,12 +1,12 @@
 function section() {
 
-    var totalWidth = screen.width,
-        totalHeight = 800;
+    var totalWidth = $( window ).innerWidth(),
+        totalHeight = 800//$( window ).innerWidth() * 0.60 ;
 
     var margin = {
-        top: 10,
-        left: 50,
-        bottom: 30,
+        top: 0,
+        left: 0,
+        bottom: 0,
         right: 0
     }
 
@@ -380,7 +380,7 @@ function clusterChart(data) {
         }
     }, Object.create(null));
 
-    legend("#legend_A", 'A', 300, 230)
+    themes("#legend_A", 'A', 300, 230)
     legend("#legend_B", 'B', 300, 260)
     legend("#legend_C", 'C', 280, 220)
     legend("#legend_D", 'D', 280, 180)

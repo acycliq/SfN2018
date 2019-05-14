@@ -78,6 +78,91 @@ function legend(div_id, group_id, legendWidth, legendHeight) {
     return legendData
 }
 
+var rgbToHex = (r, g, b) => '#' + [r, g, b].map(x => {
+            const hex = x.toString(16)
+            return hex.length === 1 ? '0' + hex : hex
+        }).join('')
+
+function themes(div_id, group_id, legendWidth, legendHeight) {
+    // id: "#legend_A"
+    var themeData = [];
+
+    themeData.push({ label: 'A. Developement', hex: rgbToHex(179, 179, 0)});
+    themeData.push({ label: 'B. Neural Excitability, Synapses, and Glia', hex: rgbToHex(255, 0, 255)});
+    themeData.push({ label: 'C. Neurodegenerative Disorders and Injury', hex: rgbToHex(0, 179, 179)});
+    themeData.push({ label: 'D. Sensory Systems', hex: rgbToHex(0, 128, 255)});
+    themeData.push({ label: 'E. Motor Systems', hex: rgbToHex(255, 0, 0)});
+    themeData.push({ label: 'F. Integrative Physiology and Behavior', hex: rgbToHex(0, 255, 0)});
+    themeData.push({ label: 'G. Motivation and Emotion', hex: rgbToHex(0, 0, 255)});
+    themeData.push({ label: 'H. Cognition', hex: rgbToHex(128, 128, 128)});
+    themeData.push({ label: 'I. Techniques', hex: rgbToHex(0, 0, 0)});
+    var legendColor = colorConfig.filter(d => d.label.startsWith(group_id))
+
+    // set the color
+    color = d3.scaleOrdinal()
+        .range(themeData.map(a => a.hex))
+        .domain(themeData.map(a => a.label))
+
+
+    //Legend
+    var legendMargin = {left: 5, top: 10, right: 5, bottom: 10};
+        // legendWidth = 310;
+        // legendHeight = 270;
+
+    var svgLegend = d3.select(div_id).append("svg")
+        .attr("width", (legendWidth + legendMargin.left + legendMargin.right))
+        .attr("height", (legendHeight + legendMargin.top + legendMargin.bottom));
+
+    var legendWrapper = svgLegend.append("g").attr("class", "legendWrapper")
+        .attr("transform", "translate(" + legendMargin.left + "," + legendMargin.top + ")");
+
+    var rectSize = 15, //dimensions of the colored square
+        rowHeight = 20, //height of a row in the legend
+        maxWidth = legendWidth; //width of each row
+
+    //Create container per rect/text pair
+    var legend = legendWrapper.selectAll('.legendSquare')
+        .data(color.range())
+        .enter().append('g')
+        .attr('class', 'legendSquare')
+        .attr("transform", function (d, i) {
+            return "translate(" + 0 + "," + (i * rowHeight) + ")";
+        })
+        .style("cursor", "pointer")
+        .on("mouseover", mouseover())
+        .on("mouseout", mouseout())
+        .on("click", clickLegend)
+        .on("dblclick", dblclickLegend);
+
+    //Non visible white rectangle behind square and text for better hover
+    legend.append('rect')
+        .attr('width', maxWidth)
+        .attr('height', rowHeight)
+        .style('fill', 'rgba(255, 255, 255, 0)');
+    //Append small squares to Legend
+    legend.append('rect')
+        .attr('width', rectSize)
+        .attr('height', rectSize)
+        .style('fill', function (d) {
+            return d;
+        });
+    //Append text to Legend
+    legend.append('text')
+        .attr('transform', 'translate(' + 22 + ',' + (rectSize / 2) + ')')
+        .attr("class", "legendText")
+        .style("font-size", "10px")
+        .attr("dy", ".35em")
+        .text(function (d, i) {
+            return color.domain()[i];
+        });
+
+    //Reset the click event when the user clicks anywhere but the legend
+    d3.select("body").on("click", resetClick);
+
+    return legendData
+
+}
+
 // I think I will make dotsGroup global var
 function clickLegend(d, i) {
     console.log('legend was clicked');
