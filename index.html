@@ -132,115 +132,104 @@
     </div>
 
 
-    <!-- map content -->
-    <div class="tab-pane active fade in" id="map-content">
-        <div class="container-fluid">
-            <div class="row" style="margin-top:1px">
-                <!--//top row-->
-                <div class="row" style="margin-top:5px">
-                    <div class="col-sm-12">
-                        <!-- Map -->
-                        <div class="col-sm-12">
-                            <div class="chart-wrapper">
-                                <div class="chart-title">
-                                    Cluster Map
-                                </div>
-                                <div class="chart-stage">
-                                    <div id="mymap" style="width: 100%;">
-                                        <svg></svg>
-                                    </div>
-                                    <div class="box-wrapper top left">
-                                        <div>
-                                            <div id="legendTitle"
-                                                 style="font-size: 12px; color: rgb(179, 179, 0); font-weight: bold;">
+    <!-- Map -->
+    <div class="col-sm-12 container-fluid" id="map-content">
+        <div class="chart-wrapper">
+            <div class="chart-title">
+                Cluster Map
+            </div>
+            <div class="chart-stage">
+                <div id="mymap" style="width: 100%;">
+                    <svg></svg>
+                </div>
+                <div class="box-wrapper top left">
+                    <div>
+                        <div id="legendTitle"
+                             style="font-size: 12px; color: rgb(179, 179, 0); font-weight: bold;">
                                                 <span onclick="headerClick(rgbToHex(179, 179, 0))"
                                                       style="cursor: pointer">A. Development</span>
-                                            </div>
-                                            <!--<div class="legendText" style="font-size: 11px; color: #BABABA;">click to select all subjects within a category</div>-->
-                                            <div id="legend_A" style="margin-top:-8px;"></div>
+                        </div>
+                        <!--<div class="legendText" style="font-size: 11px; color: #BABABA;">click to select all subjects within a category</div>-->
+                        <div id="legend_A" style="margin-top:-8px;"></div>
 
-                                            <div class="legendTitle"
-                                                 style="font-size: 12px; color: rgb(0, 179, 179); font-weight: bold;">
+                        <div class="legendTitle"
+                             style="font-size: 12px; color: rgb(0, 179, 179); font-weight: bold;">
                                                 <span onclick="headerClick(rgbToHex(0, 179, 179))"
                                                       style="cursor: pointer">C. Neurodegenerative Disorders and Injury</span>
-                                            </div>
-                                            <!--<div class="legendText" style="font-size: 11px; color: #BABABA;">click to select all subjects within a category</div>-->
-                                            <div id="legend_C" style="margin-top:-8px;"></div>
-                                        </div>
-                                        <div>
-                                            <div class="legendTitle"
-                                                 style="font-size: 12px; color: rgb(255, 0, 255);font-weight: bold;">
+                        </div>
+                        <!--<div class="legendText" style="font-size: 11px; color: #BABABA;">click to select all subjects within a category</div>-->
+                        <div id="legend_C" style="margin-top:-8px;"></div>
+                    </div>
+                    <div>
+                        <div class="legendTitle"
+                             style="font-size: 12px; color: rgb(255, 0, 255);font-weight: bold;">
                                                 <span onclick="headerClick(rgbToHex(255, 0, 255))"
                                                       style="cursor: pointer">B. Neural Excitability, Synapses, and Glia</span>
-                                            </div>
-                                            <div id="legend_B" style="margin-top:-8px;"></div>
-                                        </div>
-                                    </div>
+                        </div>
+                        <div id="legend_B" style="margin-top:-8px;"></div>
+                    </div>
+                </div>
 
-                                    <div class="box-wrapper bottom left">
-                                        <div>
-                                            <div class="legendTitle"
-                                                 style="font-size: 12px; color: rgb(0, 128, 255);font-weight: bold;">
+                <div class="box-wrapper bottom left">
+                    <div>
+                        <div class="legendTitle"
+                             style="font-size: 12px; color: rgb(0, 128, 255);font-weight: bold;">
                                                 <span onclick="headerClick(rgbToHex(0, 128, 255))"
                                                       style="cursor: pointer">D. Sensory Systems</span>
-                                            </div>
-                                            <div id="legend_D" style="margin-top:-8px;"></div>
-                                        </div>
-                                        <div>
-                                            <div class="legendTitle"
-                                                 style="font-size: 12px; color: rgb(255, 0, 0);font-weight: bold;">
+                        </div>
+                        <div id="legend_D" style="margin-top:-8px;"></div>
+                    </div>
+                    <div>
+                        <div class="legendTitle"
+                             style="font-size: 12px; color: rgb(255, 0, 0);font-weight: bold;">
                                                 <span onclick="headerClick(rgbToHex(255, 0, 0))"
                                                       style="cursor: pointer">E. Motor Systems</span>
-                                            </div>
-                                            <div id="legend_E" style="margin-top:-8px;"></div>
-                                        </div>
-                                    </div>
+                        </div>
+                        <div id="legend_E" style="margin-top:-8px;"></div>
+                    </div>
+                </div>
 
-                                    <div class="box-wrapper top right">
-                                        <div>
-                                            <div class="legendTitle"
-                                                 style="font-size: 12px; color: rgb(128, 128, 128);font-weight: bold;">
+                <div class="box-wrapper top right">
+                    <div>
+                        <div class="legendTitle"
+                             style="font-size: 12px; color: rgb(128, 128, 128);font-weight: bold;">
                                                 <span onclick="headerClick(rgbToHex(128, 128, 128))"
                                                       style="cursor: pointer">H. Cognition</span>
-                                            </div>
-                                            <div id="legend_H" style="margin-top:-8px;"></div>
-                                        </div>
-                                        <div>
-                                            <div class="legendTitle"
-                                                 style="font-size: 12px; color: rgb(0, 0, 255);font-weight: bold;">
+                        </div>
+                        <div id="legend_H" style="margin-top:-8px;"></div>
+                    </div>
+                    <div>
+                        <div class="legendTitle"
+                             style="font-size: 12px; color: rgb(0, 0, 255);font-weight: bold;">
                                                 <span onclick="headerClick(rgbToHex(0, 0, 255))"
                                                       style="cursor: pointer">G. Motivation and Emotion</span>
-                                            </div>
-                                            <div id="legend_G" style="margin-top:-8px;"></div>
+                        </div>
+                        <div id="legend_G" style="margin-top:-8px;"></div>
 
-                                            <div class="legendTitle"
-                                                 style="font-size: 12px; color: rgb(0, 255, 0);font-weight: bold;">
+                        <div class="legendTitle"
+                             style="font-size: 12px; color: rgb(0, 255, 0);font-weight: bold;">
                                                 <span onclick="headerClick(rgbToHex(0, 255, 0))"
                                                       style="cursor: pointer">F. Integrative Physiology and Behavior</span>
-                                            </div>
-                                            <div id="legend_F" style="margin-top:-8px;"></div>
-                                        </div>
-                                    </div>
-
-                                    <div class="box-wrapper bottom right">
-                                        <div>
-                                            <div class="legendTitle"
-                                                 style="font-size: 12px; color: rgb(0, 0, 0);font-weight: bold;">
-                                                <span onclick="headerClick(rgbToHex(0, 0, 0))" style="cursor: pointer">I. Techniques</span>
-                                            </div>
-                                            <div id="legend_I" style="margin-top:-8px;"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
-                        <!-- Map -->
+                        <div id="legend_F" style="margin-top:-8px;"></div>
                     </div>
+                </div>
 
+                <div class="box-wrapper bottom right">
+                    <div>
+                        <div class="legendTitle"
+                             style="font-size: 12px; color: rgb(0, 0, 0);font-weight: bold;">
+                                <span onclick="headerClick(rgbToHex(0, 0, 0))"
+                                      style="cursor: pointer">I. Techniques</span>
+                        </div>
+                        <div id="legend_I" style="margin-top:-8px;"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Map -->
+
 
     <script>
         var rgbToHex = (r, g, b) => '#' + [r, g, b].map(x => {
