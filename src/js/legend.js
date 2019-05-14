@@ -129,7 +129,7 @@ function themes(div_id, group_id, legendWidth, legendHeight) {
             return "translate(" + 0 + "," + (i * rowHeight) + ")";
         })
         .style("cursor", "pointer")
-        .on("mouseover", mouseover())
+        .on("mouseover", thememouseover())
         .on("mouseout", mouseout())
         .on("click", clickLegend)
         .on("dblclick", dblclickLegend);
@@ -159,7 +159,6 @@ function themes(div_id, group_id, legendWidth, legendHeight) {
     //Reset the click event when the user clicks anywhere but the legend
     d3.select("body").on("click", resetClick);
 
-    return legendData
 
 }
 
@@ -392,3 +391,31 @@ function mouseout() {
     };
 }//function selectLegend
 
+function thememouseover() {
+    return function (c, i) {
+        // console.log(d)
+
+        dotsGroup.selectAll(".dotOnScatter")
+            .filter(function (d) {
+                return d.hex != c;
+            })
+            .transition()
+            .style('stroke', 'black')
+            .style("stroke-width", 0)
+            .attr('r', d => d.radius)
+            .style("opacity", opacityOff);
+
+        dotsGroup.selectAll(".dotOnScatter")
+            .filter(function (d) {
+                return d.hex === c;
+            })
+            .transition()
+            .style('stroke', 'black')
+            .style("stroke-width", 2)
+            .attr('r', d => d.radius * 1.5)
+            .style("opacity", opacityOn);
+
+        // groupLabelHandler(chosen)
+
+    };
+}//function mouseover
