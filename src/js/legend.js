@@ -3,28 +3,29 @@
 ///////////////////////////////////////////////////////////////////////////
 var color,
     opacityOn = 0.8,
-    opacityOff = 0.2;
+    opacityOff = 0.2,
+    group_id = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I' ]
 
-function legend(div_id, group_id, legendWidth, legendHeight) {
+function legend(idx, legendWidth, legendHeight) {
     // id: "#legend_A"
     var legendData = [];
 
-    var legendColor = colorConfig.filter(d => d.label.startsWith(group_id))
+    var legendColor = colorConfig.filter(d => d.label.startsWith(group_id[idx]))
 
     // set the color
     color = d3.scaleOrdinal()
         .range(legendColor.map(a => a.hex))
         .domain(legendColor.map(a => a.label))
 
-    legendData.color = color;
-    legendData.group_id = group_id;
+    // legendData.color = color;
+    // legendData.group_id = group_id;
 
     //Legend
     var legendMargin = {left: 5, top: 10, right: 5, bottom: 10};
         // legendWidth = 310;
         // legendHeight = 270;
 
-    var svgLegend = d3.select(div_id).append("svg")
+    var svgLegend = d3.select('#my_legend').append("svg")
         .attr("width", (legendWidth + legendMargin.left + legendMargin.right))
         .attr("height", (legendHeight + legendMargin.top + legendMargin.bottom));
 
@@ -75,7 +76,7 @@ function legend(div_id, group_id, legendWidth, legendHeight) {
     d3.select("body").on("click", resetClick);
 
 
-    return legendData
+    // return legendData
 }
 
 var rgbToHex = (r, g, b) => '#' + [r, g, b].map(x => {
@@ -129,7 +130,7 @@ function themes(div_id, group_id, legendWidth, legendHeight) {
             return "translate(" + 0 + "," + (i * rowHeight) + ")";
         })
         .style("cursor", "pointer")
-        .on("mouseover", thememouseover())
+        .on("mouseover", filterByColour())
         .on("mouseout", mouseout())
         .on("click", clickLegend)
         .on("dblclick", dblclickLegend);
@@ -391,7 +392,7 @@ function mouseout() {
     };
 }//function selectLegend
 
-function thememouseover() {
+function filterByColour() {
     return function (c, i) {
         // console.log(d)
 
@@ -414,6 +415,8 @@ function thememouseover() {
             .style("stroke-width", 2)
             .attr('r', d => d.radius * 1.5)
             .style("opacity", opacityOn);
+
+         legend(2, 300, 260)
 
         // groupLabelHandler(chosen)
 
