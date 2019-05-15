@@ -227,6 +227,8 @@ function topicLabelHandler(chosen) {
 
 function mouseout() {
     return function (d, i) {
+        console.log('in mouse out')
+        hideLabels()
         dotsGroup.selectAll(".dotOnScatter")
             .transition()
             .style('stroke', 'black')

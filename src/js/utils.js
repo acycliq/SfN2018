@@ -7,6 +7,7 @@ var rgbToHex = (r, g, b) => '#' + [r, g, b].map(x => {
 
 
 function hideLabels() {
+    console.log('removing labels')
     // hide the topic labels
     dotsGroup.selectAll(".topicLabel")
         .transition()
