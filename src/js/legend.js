@@ -164,6 +164,9 @@ function resetClick() {
     // Hide the labels
     hideLabels()
 
+    // clear svg from its contents
+    d3.select('#topic_div').select('svg').selectAll("*").remove();
+
 }//resetClick
 
 
