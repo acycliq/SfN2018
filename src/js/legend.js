@@ -22,9 +22,9 @@ function legend(idx, legendWidth, legendHeight) {
     var legendMargin = {left: 5, top: 10, right: 5, bottom: 10};
 
     // clear svg from its contents
-    d3.select('#my_legend').select('svg').selectAll("*").remove();
+    d3.select('#topic_div').select('svg').selectAll("*").remove();
 
-    var svgLegend = d3.select('#my_legend').select("svg")
+    var svgLegend = d3.select('#topic_div').select("svg")
         .attr("width", (legendWidth + legendMargin.left + legendMargin.right))
         .attr("height", (legendHeight + legendMargin.top + legendMargin.bottom));
 
@@ -119,7 +119,7 @@ function clickLegend(d, i) {
 function resetClick() {
 
     //Activate the mouse over and mouse out events of the legend
-    d3.select("#legend_A").selectAll(".legendSquare")
+    d3.select("#theme_div").selectAll(".legendSquare")
         .on("mouseover", mouseover())
         .on("mouseout", mouseout());
 

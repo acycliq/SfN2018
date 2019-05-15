@@ -156,5 +156,5 @@ function onClick() {
 
 function onMouseOut() {
     console.log('Exiting themes....removing the topics')
-    d3.select('#my_legend').select('svg').selectAll("*").remove();
+    d3.select('#topic_div').select('svg').selectAll("*").remove();
 }
