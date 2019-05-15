@@ -19,7 +19,7 @@ function themes(div_id, group_id, themeWidth, themeHeight) {
         .domain(themeData.map(a => a.label))
 
 
-    var themeMargin = {left: 5, top: 10, right: 5, bottom: 10};
+    var themeMargin = {left: 5, top: 10, right: 5, bottom: 0};
 
     var svgTheme = d3.select(div_id).append("svg")
         .attr("width", (themeWidth + themeMargin.left + themeMargin.right))

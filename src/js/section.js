@@ -380,7 +380,7 @@ function clusterChart(data) {
         }
     }, Object.create(null));
 
-    themes("#theme_div", 'A', 300, 230)
+    themes("#theme_div", 'A', 300, 205)
 
 
 
