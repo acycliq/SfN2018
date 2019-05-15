@@ -232,7 +232,7 @@ function mouseout() {
         dotsGroup.selectAll(".dotOnScatter")
             .transition()
             .style('stroke', 'black')
-            .attr("stroke-width", 0)
+            .style("stroke-width", 0)
             .attr('r', d => d.radius)
             .style("opacity", opacityOn);
 
