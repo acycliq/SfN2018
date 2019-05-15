@@ -1,11 +1,11 @@
 function section() {
 
-    var totalWidth = $( window ).innerWidth(),
+    var totalWidth = 1200//$( window ).innerWidth(),
         totalHeight = 800//$( window ).innerWidth() * 0.60 ;
 
     var margin = {
         top: 0,
-        left: 0,
+        left: 250,
         bottom: 0,
         right: 0
     }
@@ -189,7 +189,7 @@ function clusterChart(data) {
     function updateScales() {
         var extent = getExtent();
 
-        sectionFeatures.scale.x.domain([extent.x[0] - 20, extent.x[1] + 30]).nice()
+        sectionFeatures.scale.x.domain([extent.x[0], extent.x[1]]).nice()
         sectionFeatures.scale.y.domain(extent.y).nice()
     }
 
