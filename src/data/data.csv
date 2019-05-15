@@ -1,117 +1,117 @@
 x,y,r,g,b,radius,description,group,gx,gy
--13.03464897,8.048922641,179,179,0,5,A.01.a. Nervous system patterning and developmental cell death,A.01. Neurogenesis and Gliogenesis,-12.22752006,8.16015277
--12.3385282,9.540342207,179,179,0,5,A.01.b. Proliferation: Self-renewal and cell cycle,A.01. Neurogenesis and Gliogenesis,-12.22752006,8.16015277
--12.41932695,9.516360361,179,179,0,5,A.01.c. Proliferation: Molecular mechanisms,A.01. Neurogenesis and Gliogenesis,-12.22752006,8.16015277
--12.11651193,7.505062028,179,179,0,5,A.01.d. Cell lineage,A.01. Neurogenesis and Gliogenesis,-12.22752006,8.16015277
--11.96269752,7.748913446,179,179,0,5,A.01.e. Mechanisms of cell fate,A.01. Neurogenesis and Gliogenesis,-12.22752006,8.16015277
--11.86594792,8.967893003,179,179,0,5,A.01.f. Cell migration,A.01. Neurogenesis and Gliogenesis,-12.22752006,8.16015277
--11.01988246,8.271382898,179,179,0,8,A.01.g. Neuronal differentiation,A.01. Neurogenesis and Gliogenesis,-12.22752006,8.16015277
--13.40307507,6.542901354,179,179,0,5,A.01.h. Glial differentiation and interaction with neurons,A.01. Neurogenesis and Gliogenesis,-12.22752006,8.16015277
--10.30870939,9.574187446,179,179,0,5,A.02 b. Postnatal neurogenesis: Molecular mechanisms,A.02. Postnatal Neurogenesis,-10.14056996,9.574187446
--9.677458588,9.244093228,179,179,0,5,A.02 c. Postnatal neurogenesis: Environmental and pharmacological regulation,A.02. Postnatal Neurogenesis,-10.14056996,9.574187446
--10.14056996,9.787988301,179,179,0,5,A.02.a. Postnatal neurogenesis: Temporal and spatial patterns,A.02. Postnatal Neurogenesis,-10.14056996,9.574187446
--10.16978052,6.978864389,179,179,0,11,A.03.a. Pluripotent stem cells: Disease models,A.03. Stem Cells and Reprogramming,-10.86425879,6.911187139
--11.43334671,6.843509888,179,179,0,7,A.03.b. Pluripotent stem cells: Neural differentiation,A.03. Stem Cells and Reprogramming,-10.86425879,6.911187139
--10.86338877,6.19021159,179,179,0,5,A.03.c. Neural lineage reprogramming,A.03. Stem Cells and Reprogramming,-10.86425879,6.911187139
--10.86512881,7.002594512,179,179,0,6,A.03.d. Neural stem cells: In vitro studies,A.03. Stem Cells and Reprogramming,-10.86425879,6.911187139
--11.88491462,5.55971479,179,179,0,5,A.04.a. Transplantation,A.04. Transplantation and Regeneration,-11.9456399,4.317197382
--12.74283815,3.068262157,179,179,0,5,A.04.b. Regeneration: PNS,A.04. Transplantation and Regeneration,-11.9456399,4.317197382
--11.9456399,4.317197382,179,179,0,5,A.04.c. Regeneration: CNS,A.04. Transplantation and Regeneration,-11.9456399,4.317197382
--8.244919065,4.529261823,179,179,0,5,A.05.a. Axon growth and guidance: Adhesion and cytoskeletal dynamics,A.05. Axon and Dendrite Development,-8.502346373,4.525337791
--8.759773681,4.461884184,179,179,0,5,A.05.b. Axon growth and guidance: Axonal transport and trafficking,A.05. Axon and Dendrite Development,-8.502346373,4.525337791
--9.391792083,4.582665018,179,179,0,5,A.05.c. Axon growth and guidance: Extrinsic mechanisms,A.05. Axon and Dendrite Development,-8.502346373,4.525337791
--7.64560554,4.52141376,179,179,0,5,A.05.d. Dendritic growth and branching,A.05. Axon and Dendrite Development,-8.502346373,4.525337791
--6.446235887,4.079085044,179,179,0,5,A.06.a. Synapse formation,A.06. Synaptogenesis and Activity-Dependent Development,-5.516563581,4.746278935
--6.112743517,3.908075353,179,179,0,5,A.06.b. Synapse maturation and remodeling,A.06. Synaptogenesis and Activity-Dependent Development,-5.516563581,4.746278935
--4.920383644,5.413472826,179,179,0,5,A.06.c. Neural circuit maturation and remodeling,A.06. Synaptogenesis and Activity-Dependent Development,-5.516563581,4.746278935
--0.949983606,6.761153658,179,179,0,5,A.06.d. Mitochondria and synaptic function,A.06. Synaptogenesis and Activity-Dependent Development,-5.516563581,4.746278935
--5.143987503,9.094184419,179,179,0,9,A.07.I. Animal models of developmental disorders other than autism,A.07. Developmental Disorders,-4.604247661,9.81524691
--3.487303784,10.58598007,179,179,0,5,A.07.a. Autism: Behavioral analysis,A.07. Developmental Disorders,-4.604247661,9.81524691
--4.5496038,10.40538558,179,179,0,6,A.07.b. Autism: Genetic models,A.07. Developmental Disorders,-4.604247661,9.81524691
--4.604247661,10.28170177,179,179,0,9,A.07.c. Autism: Synaptic and cellular mechanisms,A.07. Developmental Disorders,-4.604247661,9.81524691
--3.086626095,9.81524691,179,179,0,5,A.07.d. Autism: Environment and pathology,A.07. Developmental Disorders,-4.604247661,9.81524691
--3.785134713,10.90934806,179,179,0,8,A.07.e. Autism: Physiology and systems,A.07. Developmental Disorders,-4.604247661,9.81524691
--7.000208106,9.050950026,179,179,0,5,A.07.f. Rett syndrome,A.07. Developmental Disorders,-4.604247661,9.81524691
--6.01559866,10.69349166,179,179,0,5,A.07.g. Fragile X,A.07. Developmental Disorders,-4.604247661,9.81524691
--20.63790578,-3.940444844,179,179,0,5,A.07.h. Down syndrome,A.07. Developmental Disorders,-4.604247661,9.81524691
--6.281654613,9.608068576,179,179,0,5,A.07.i. Angelman and other developmental disorders,A.07. Developmental Disorders,-4.604247661,9.81524691
-2.216944218,10.57265459,179,179,0,5,"A.07.j. ADHD, SLI, dyslexia and other specific disorders of neurobehavior",A.07. Developmental Disorders,-4.604247661,9.81524691
--4.007499256,9.639801266,179,179,0,10,A.07.k. Animal models of autism,A.07. Developmental Disorders,-4.604247661,9.81524691
--5.687451858,9.023205608,179,179,0,8,A.07.m. Molecular Mechanisms,A.07. Developmental Disorders,-4.604247661,9.81524691
--5.357616354,6.925527405,179,179,0,5,A.08.a. Motor systems,"A.08. Development of Motor, Sensory, and Limbic Systems",-4.526953259,6.732734377
--4.526953259,5.643822027,179,179,0,5,A.08.b. Sensory systems,"A.08. Development of Motor, Sensory, and Limbic Systems",-4.526953259,6.732734377
--4.249422716,6.732734377,179,179,0,5,A.08.c. Limbic system,"A.08. Development of Motor, Sensory, and Limbic Systems",-4.526953259,6.732734377
-4.052980189,10.75156045,179,179,0,5,A.09.a. Animal models,A.09. Adolescent Development,4.113493913,10.95714352
-4.237957318,11.93360143,179,179,0,5,A.09.b. Human imaging,A.09. Adolescent Development,4.113493913,10.95714352
-4.113493913,10.95714352,179,179,0,5,A.09.c. Mechanisms of vulnerability,A.09. Adolescent Development,4.113493913,10.95714352
--7.607906164,13.34334844,179,179,0,5,A.10.a. Comparative anatomy,A.10. Development and Evolution,-7.620541488,13.32645446
--7.633176813,13.30956048,179,179,0,5,A.10.b. Comparative cellular and molecular mechanisms,A.10. Development and Evolution,-7.620541488,13.32645446
+-13.03464897,8.048922641,179,179,0,5,A.01.a. Nervous system patterning and developmental cell death,A.01. Neurogenesis and Gliogenesis,-12.22752006,10.36015277
+-12.3385282,9.540342207,179,179,0,5,A.01.b. Proliferation: Self-renewal and cell cycle,A.01. Neurogenesis and Gliogenesis,-12.22752006,10.36015277
+-12.41932695,9.516360361,179,179,0,5,A.01.c. Proliferation: Molecular mechanisms,A.01. Neurogenesis and Gliogenesis,-12.22752006,10.36015277
+-12.11651193,7.505062028,179,179,0,5,A.01.d. Cell lineage,A.01. Neurogenesis and Gliogenesis,-12.22752006,10.36015277
+-11.96269752,7.748913446,179,179,0,5,A.01.e. Mechanisms of cell fate,A.01. Neurogenesis and Gliogenesis,-12.22752006,10.36015277
+-11.86594792,8.967893003,179,179,0,5,A.01.f. Cell migration,A.01. Neurogenesis and Gliogenesis,-12.22752006,10.36015277
+-11.01988246,8.271382898,179,179,0,8,A.01.g. Neuronal differentiation,A.01. Neurogenesis and Gliogenesis,-12.22752006,10.36015277
+-13.40307507,6.542901354,179,179,0,5,A.01.h. Glial differentiation and interaction with neurons,A.01. Neurogenesis and Gliogenesis,-12.22752006,10.36015277
+-10.30870939,9.574187446,179,179,0,5,A.02 b. Postnatal neurogenesis: Molecular mechanisms,A.02. Postnatal Neurogenesis,-10.14056996,10.574187446
+-9.677458588,9.244093228,179,179,0,5,A.02 c. Postnatal neurogenesis: Environmental and pharmacological regulation,A.02. Postnatal Neurogenesis,-10.14056996,10.574187446
+-10.14056996,9.787988301,179,179,0,5,A.02.a. Postnatal neurogenesis: Temporal and spatial patterns,A.02. Postnatal Neurogenesis,-10.14056996,10.574187446
+-10.16978052,6.978864389,179,179,0,11,A.03.a. Pluripotent stem cells: Disease models,A.03. Stem Cells and Reprogramming,-10.86425879,8.311187139
+-11.43334671,6.843509888,179,179,0,7,A.03.b. Pluripotent stem cells: Neural differentiation,A.03. Stem Cells and Reprogramming,-10.86425879,8.311187139
+-10.86338877,6.19021159,179,179,0,5,A.03.c. Neural lineage reprogramming,A.03. Stem Cells and Reprogramming,-10.86425879,8.311187139
+-10.86512881,7.002594512,179,179,0,6,A.03.d. Neural stem cells: In vitro studies,A.03. Stem Cells and Reprogramming,-10.86425879,8.311187139
+-11.88491462,5.55971479,179,179,0,5,A.04.a. Transplantation,A.04. Transplantation and Regeneration,-11.9456399,6.317197382
+-12.74283815,3.068262157,179,179,0,5,A.04.b. Regeneration: PNS,A.04. Transplantation and Regeneration,-11.9456399,6.317197382
+-11.9456399,4.317197382,179,179,0,5,A.04.c. Regeneration: CNS,A.04. Transplantation and Regeneration,-11.9456399,6.317197382
+-8.244919065,4.529261823,179,179,0,5,A.05.a. Axon growth and guidance: Adhesion and cytoskeletal dynamics,A.05. Axon and Dendrite Development,-8.502346373,5.525337791
+-8.759773681,4.461884184,179,179,0,5,A.05.b. Axon growth and guidance: Axonal transport and trafficking,A.05. Axon and Dendrite Development,-8.502346373,5.525337791
+-9.391792083,4.582665018,179,179,0,5,A.05.c. Axon growth and guidance: Extrinsic mechanisms,A.05. Axon and Dendrite Development,-8.502346373,5.525337791
+-7.64560554,4.52141376,179,179,0,5,A.05.d. Dendritic growth and branching,A.05. Axon and Dendrite Development,-8.502346373,5.525337791
+-6.446235887,4.079085044,179,179,0,5,A.06.a. Synapse formation,A.06. Synaptogenesis and Activity-Dependent Development,-5.516563581,7.746278935
+-6.112743517,3.908075353,179,179,0,5,A.06.b. Synapse maturation and remodeling,A.06. Synaptogenesis and Activity-Dependent Development,-5.516563581,7.746278935
+-4.920383644,5.413472826,179,179,0,5,A.06.c. Neural circuit maturation and remodeling,A.06. Synaptogenesis and Activity-Dependent Development,-5.516563581,7.746278935
+-0.949983606,6.761153658,179,179,0,5,A.06.d. Mitochondria and synaptic function,A.06. Synaptogenesis and Activity-Dependent Development,-5.516563581,7.746278935
+-5.143987503,9.094184419,179,179,0,9,A.07.I. Animal models of developmental disorders other than autism,A.07. Developmental Disorders,-4.604247661,11.81524691
+-3.487303784,10.58598007,179,179,0,5,A.07.a. Autism: Behavioral analysis,A.07. Developmental Disorders,-4.604247661,11.81524691
+-4.5496038,10.40538558,179,179,0,6,A.07.b. Autism: Genetic models,A.07. Developmental Disorders,-4.604247661,11.81524691
+-4.604247661,10.28170177,179,179,0,9,A.07.c. Autism: Synaptic and cellular mechanisms,A.07. Developmental Disorders,-4.604247661,11.81524691
+-3.086626095,9.81524691,179,179,0,5,A.07.d. Autism: Environment and pathology,A.07. Developmental Disorders,-4.604247661,11.81524691
+-3.785134713,10.90934806,179,179,0,8,A.07.e. Autism: Physiology and systems,A.07. Developmental Disorders,-4.604247661,11.81524691
+-7.000208106,9.050950026,179,179,0,5,A.07.f. Rett syndrome,A.07. Developmental Disorders,-4.604247661,11.81524691
+-6.01559866,10.69349166,179,179,0,5,A.07.g. Fragile X,A.07. Developmental Disorders,-4.604247661,11.81524691
+-20.63790578,-3.940444844,179,179,0,5,A.07.h. Down syndrome,A.07. Developmental Disorders,-4.604247661,11.81524691
+-6.281654613,9.608068576,179,179,0,5,A.07.i. Angelman and other developmental disorders,A.07. Developmental Disorders,-4.604247661,11.81524691
+2.216944218,10.57265459,179,179,0,5,"A.07.j. ADHD, SLI, dyslexia and other specific disorders of neurobehavior",A.07. Developmental Disorders,-4.604247661,11.81524691
+-4.007499256,9.639801266,179,179,0,10,A.07.k. Animal models of autism,A.07. Developmental Disorders,-4.604247661,11.81524691
+-5.687451858,9.023205608,179,179,0,8,A.07.m. Molecular Mechanisms,A.07. Developmental Disorders,-4.604247661,11.81524691
+-5.357616354,6.925527405,179,179,0,5,A.08.a. Motor systems,"A.08. Development of Motor, Sensory, and Limbic Systems",-4.526953259,7.732734377
+-4.526953259,5.643822027,179,179,0,5,A.08.b. Sensory systems,"A.08. Development of Motor, Sensory, and Limbic Systems",-4.526953259,7.732734377
+-4.249422716,6.732734377,179,179,0,5,A.08.c. Limbic system,"A.08. Development of Motor, Sensory, and Limbic Systems",-4.526953259,7.732734377
+4.052980189,10.75156045,179,179,0,5,A.09.a. Animal models,A.09. Adolescent Development,4.113493913,12.95714352
+4.237957318,11.93360143,179,179,0,5,A.09.b. Human imaging,A.09. Adolescent Development,4.113493913,12.95714352
+4.113493913,10.95714352,179,179,0,5,A.09.c. Mechanisms of vulnerability,A.09. Adolescent Development,4.113493913,12.95714352
+-7.607906164,13.34334844,179,179,0,5,A.10.a. Comparative anatomy,A.10. Development and Evolution,-7.620541488,14.32645446
+-7.633176813,13.30956048,179,179,0,5,A.10.b. Comparative cellular and molecular mechanisms,A.10. Development and Evolution,-7.620541488,14.32645446
 -1.530654843,-0.631578813,255,0,255,5,B.01.a. Glutamate,"B.01. Neurotransmitters, Transporters, and Signaling Molecules",-0.653205753,3.652991822
 0.508029018,12.38509131,255,0,255,7,B.01.b. Monoamines,"B.01. Neurotransmitters, Transporters, and Signaling Molecules",-0.653205753,3.652991822
 0.224243337,0.372622442,255,0,255,5,B.01.c. Amino acids and other small-molecule neurotransmitters and messengers,"B.01. Neurotransmitters, Transporters, and Signaling Molecules",-0.653205753,3.652991822
 0.338005458,13.80232477,255,0,255,5,"B.01.d. Opiates, cytokines, and other neuropeptides","B.01. Neurotransmitters, Transporters, and Signaling Molecules",-0.653205753,3.652991822
 -3.575269694,2.368666027,255,0,255,5,B.01.e. Neurotrophins,"B.01. Neurotransmitters, Transporters, and Signaling Molecules",-0.653205753,3.652991822
 -17.73134862,4.937317616,255,0,255,5,B.01.f. Comparative neurotransmitters,"B.01. Neurotransmitters, Transporters, and Signaling Molecules",-0.653205753,3.652991822
--2.902289812,-3.949118966,255,0,255,5,B.02.a. Nicotinic acetylcholine receptors in brain: Physiology and function,B.02. Ligand-Gated Ion Channels,-2.090109458,1.071616018
--2.895795715,-3.938008966,255,0,255,5,B.02.b. Nicotinic acetylcholine receptors: Structure and regulation,B.02. Ligand-Gated Ion Channels,-2.090109458,1.071616018
-1.218089758,2.527883892,255,0,255,5,B.02.c. NMDA receptors,B.02. Ligand-Gated Ion Channels,-2.090109458,1.071616018
-1.308130686,2.405276891,255,0,255,5,B.02.d. Non-NMDA receptors,B.02. Ligand-Gated Ion Channels,-2.090109458,1.071616018
--2.063051021,1.232615271,255,0,255,5,B.02.e. GABA(A) receptors,B.02. Ligand-Gated Ion Channels,-2.090109458,1.071616018
--2.117167895,0.910616764,255,0,255,5,B.02.f. Glycine receptors & other ligand gated ion channels,B.02. Ligand-Gated Ion Channels,-2.090109458,1.071616018
--1.96257701,2.447548001,255,0,255,5,B.03.a. Metabotropic glutamate and GABA B receptors,B.03. G-Protein Coupled Receptors,-0.798855401,2.447548001
-0.666608449,14.57744632,255,0,255,5,B.03.b. Peptide receptors,B.03. G-Protein Coupled Receptors,-0.798855401,2.447548001
--0.798855401,2.084603283,255,0,255,5,B.03.c. Other metabotropic receptors,B.03. G-Protein Coupled Receptors,-0.798855401,2.447548001
--10.91510618,13.71318946,255,0,255,5,B.04.a. Sodium channels,B.04. Ion Channels,-10.91510618,13.71318946
--3.28425011,-0.272082751,255,0,255,5,B.04.b. Calcium channels,B.04. Ion Channels,-10.91510618,13.71318946
--4.303734953,-0.311615246,255,0,255,5,B.04.c. Potassium channels,B.04. Ion Channels,-10.91510618,13.71318946
--12.35859154,15.65453463,255,0,255,5,B.04.d. Non-selective cation channels,B.04. Ion Channels,-10.91510618,13.71318946
--12.47354487,15.75364229,255,0,255,5,B.04.e. Mechanosensitive and other ion channels,B.04. Ion Channels,-10.91510618,13.71318946
--0.62727874,-2.00139364,255,0,255,5,"B.05.a. Vesicle docking, fusion, recycling, biogenesis",B.05. Neurotransmitter Release,-0.544838522,-1.843118742
--0.462398304,-1.684843843,255,0,255,5,B.05.b. Presynaptic organization and structure,B.05. Neurotransmitter Release,-0.544838522,-1.843118742
-1.49554034,0.851323169,255,0,255,5,B.06.a. Postsynaptic organization and structure,B.06. Synaptic Transmission,1.081656223,-0.064351435
-2.27724162,-1.292037831,255,0,255,5,B.06.b. Synaptic integration,B.06. Synaptic Transmission,1.081656223,-0.064351435
-1.576663418,-1.805428089,255,0,255,5,B.06.c. Electrical synapses and gap junctions,B.06. Synaptic Transmission,1.081656223,-0.064351435
-1.081656223,-0.795510821,255,0,255,5,B.06.d. Modulation: Peptides and amines,B.06. Synaptic Transmission,1.081656223,-0.064351435
--0.776671727,0.66848865,255,0,255,5,"B.06.e. Modulation: ACh, amino acids and GABA",B.06. Synaptic Transmission,1.081656223,-0.064351435
--0.525619629,-0.064351435,255,0,255,5,B.06.f. Modulation: Mechanisms of action,B.06. Synaptic Transmission,1.081656223,-0.064351435
--1.212470663,0.261092381,255,0,255,5,B.06.g. Modulation: Pharmacology,B.06. Synaptic Transmission,1.081656223,-0.064351435
-0.754358764,0.263985369,255,0,255,5,B.07.a. Short-term plasticity,B.07. Synaptic Plasticity,2.767807718,0.263985369
-2.107360602,1.47375338,255,0,255,5,B.07.b. LTP: Kinases and intracellular signaling,B.07. Synaptic Plasticity,2.767807718,0.263985369
-2.569580652,0.838381976,255,0,255,6,B.07.c. LTP: Pre- and Postsynaptic mechanisms,B.07. Synaptic Plasticity,2.767807718,0.263985369
-4.082172323,0.356881838,255,0,255,5,B.07.d. Long-term depression (LTD),B.07. Synaptic Plasticity,2.767807718,0.263985369
-2.845805006,-1.551759461,255,0,255,5,B.07.e. Spike-timing dependent plasticity,B.07. Synaptic Plasticity,2.767807718,0.263985369
-3.84470367,-0.448338096,255,0,255,8,B.07.f. Homeostatic plasticity,B.07. Synaptic Plasticity,2.767807718,0.263985369
-2.767807718,0.054124962,255,0,255,10,B.07.g. Structural plasticity,B.07. Synaptic Plasticity,2.767807718,0.263985369
-3.420072997,1.895476317,255,0,255,5,B.07.h. Transcription and translation in plasticity,B.07. Synaptic Plasticity,2.767807718,0.263985369
-1.67955862,-0.258083593,255,0,255,6,B.07.i. Other,B.07. Synaptic Plasticity,2.767807718,0.263985369
-1.860342139,-2.812486286,255,0,255,5,"B.08.a. Neural oscillators, dendritic properties and plasticity",B.08. Intrinsic Membrane Properties,1.427210944,-2.913200182
-0.994079749,-3.013914079,255,0,255,7,B.08.b. Modulation of neuronal firing properties,B.08. Intrinsic Membrane Properties,1.427210944,-2.913200182
-6.215268509,-4.521968663,255,0,255,5,B.09.a. Signal propagation,B.09. Network interactions,7.190405615,-4.84677606
-7.190405615,-4.799434021,255,0,255,5,B.09.b. Oscillations and synchrony: Unit studies,B.09. Network interactions,7.190405615,-4.84677606
-8.198880292,-4.872566673,255,0,255,9,B.09.c. Oscillations and synchrony: EEG studies,B.09. Network interactions,7.190405615,-4.84677606
-7.766599851,-4.84677606,255,0,255,9,B.09.d. Oscillations and synchrony: LFP studies,B.09. Network interactions,7.190405615,-4.84677606
-6.534685727,-4.886480478,255,0,255,6,B.09.e. Network interactions: Other,B.09. Network interactions,7.190405615,-4.84677606
--6.496614144,-1.690977014,255,0,255,5,B.10.a. Genetics,B.10. Epilepsy,-7.086096342,-1.690977014
--4.937078232,-0.570612838,255,0,255,5,B.10.b. Channels,B.10. Epilepsy,-7.086096342,-1.690977014
--6.77216756,-2.347134163,255,0,255,5,B.10.c. Synaptic mechanisms,B.10. Epilepsy,-7.086096342,-1.690977014
--7.669391701,-2.515875037,255,0,255,5,B.10.d. Networks,B.10. Epilepsy,-7.086096342,-1.690977014
--7.086096342,-1.995629239,255,0,255,5,B.10.e. Post-seizure modifications,B.10. Epilepsy,-7.086096342,-1.690977014
--7.489493229,-1.916348512,255,0,255,5,B.10.f. In vivo and behavior,B.10. Epilepsy,-7.086096342,-1.690977014
--6.981577787,-1.01473495,255,0,255,9,B.10.g. Animal Models,B.10. Epilepsy,-7.086096342,-1.690977014
--7.485674175,-0.95932629,255,0,255,6,B.10.h. Anticonvulsant and antiepileptic therapies,B.10. Epilepsy,-7.086096342,-1.690977014
--8.155737839,-1.367511269,255,0,255,5,B.10.i. Human Studies,B.10. Epilepsy,-7.086096342,-1.690977014
--18.49688025,3.866991357,255,0,255,9,B.11.a. Astrocytes: Biology,B.11. Glial Mechanisms,-18.08980303,3.332714325
--18.3397943,3.173592729,255,0,255,10,B.11.b. Astrocytes: Disease mechanisms,B.11. Glial Mechanisms,-18.08980303,3.332714325
--18.77205401,1.702434032,255,0,255,6,B.11.c. Microglia: Biology,B.11. Glial Mechanisms,-18.08980303,3.332714325
--18.82262873,1.607134999,255,0,255,11,B.11.d. Microglia: Disease mechanisms,B.11. Glial Mechanisms,-18.08980303,3.332714325
--16.03585329,3.949523499,255,0,255,5,B.11.e. Oligodendrocytes,B.11. Glial Mechanisms,-18.08980303,3.332714325
--17.83981176,4.124976589,255,0,255,14,B.11.f. Glia-neuron interactions: CNS,B.11. Glial Mechanisms,-18.08980303,3.332714325
--12.82625884,3.077932152,255,0,255,5,B.11.g. Glia-neuron interactions: PNS,B.11. Glial Mechanisms,-18.08980303,3.332714325
--17.05808324,3.49183592,255,0,255,5,B.11.h. Glia-neuronal interaction in energy homeostasis,B.11. Glial Mechanisms,-18.08980303,3.332714325
--15.28362885,2.829303935,255,0,255,5,B.12.a. Molecular and cellular mechanisms,B.12. Demyelinating Disorders,-15.29823962,2.829303935
--15.72307505,2.690200611,255,0,255,5,B.12.b. Therapeutics,B.12. Demyelinating Disorders,-15.29823962,2.829303935
--15.29823962,2.952994265,255,0,255,5,B.12.c. Human and animal studies,B.12. Demyelinating Disorders,-15.29823962,2.829303935
--15.08542339,0.885760879,255,0,255,5,B.13.a. Neuro-oncology,B.13. Neuro-Oncology,-15.08542339,0.885760879
+-2.902289812,-3.949118966,255,0,255,5,B.02.a. Nicotinic acetylcholine receptors in brain: Physiology and function,B.02. Ligand-Gated Ion Channels,-2.090109458,-1.071616018
+-2.895795715,-3.938008966,255,0,255,5,B.02.b. Nicotinic acetylcholine receptors: Structure and regulation,B.02. Ligand-Gated Ion Channels,-2.090109458,-1.071616018
+1.218089758,2.527883892,255,0,255,5,B.02.c. NMDA receptors,B.02. Ligand-Gated Ion Channels,-2.090109458,-1.071616018
+1.308130686,2.405276891,255,0,255,5,B.02.d. Non-NMDA receptors,B.02. Ligand-Gated Ion Channels,-2.090109458,-1.071616018
+-2.063051021,1.232615271,255,0,255,5,B.02.e. GABA(A) receptors,B.02. Ligand-Gated Ion Channels,-2.090109458,-1.071616018
+-2.117167895,0.910616764,255,0,255,5,B.02.f. Glycine receptors & other ligand gated ion channels,B.02. Ligand-Gated Ion Channels,-2.090109458,-1.071616018
+-1.96257701,2.447548001,255,0,255,5,B.03.a. Metabotropic glutamate and GABA B receptors,B.03. G-Protein Coupled Receptors,-0.798855401,3.447548001
+0.666608449,14.57744632,255,0,255,5,B.03.b. Peptide receptors,B.03. G-Protein Coupled Receptors,-0.798855401,3.447548001
+-0.798855401,2.084603283,255,0,255,5,B.03.c. Other metabotropic receptors,B.03. G-Protein Coupled Receptors,-0.798855401,3.447548001
+-10.91510618,13.71318946,255,0,255,5,B.04.a. Sodium channels,B.04. Ion Channels,-10.91510618,11.71318946
+-3.28425011,-0.272082751,255,0,255,5,B.04.b. Calcium channels,B.04. Ion Channels,-10.91510618,11.71318946
+-4.303734953,-0.311615246,255,0,255,5,B.04.c. Potassium channels,B.04. Ion Channels,-10.91510618,11.71318946
+-12.35859154,15.65453463,255,0,255,5,B.04.d. Non-selective cation channels,B.04. Ion Channels,-10.91510618,11.71318946
+-12.47354487,15.75364229,255,0,255,5,B.04.e. Mechanosensitive and other ion channels,B.04. Ion Channels,-10.91510618,11.71318946
+-0.62727874,-2.00139364,255,0,255,5,"B.05.a. Vesicle docking, fusion, recycling, biogenesis",B.05. Neurotransmitter Release,-0.544838522,-0.843118742
+-0.462398304,-1.684843843,255,0,255,5,B.05.b. Presynaptic organization and structure,B.05. Neurotransmitter Release,-0.544838522,-0.843118742
+1.49554034,0.851323169,255,0,255,5,B.06.a. Postsynaptic organization and structure,B.06. Synaptic Transmission,1.081656223,1.564351435
+2.27724162,-1.292037831,255,0,255,5,B.06.b. Synaptic integration,B.06. Synaptic Transmission,1.081656223,1.564351435
+1.576663418,-1.805428089,255,0,255,5,B.06.c. Electrical synapses and gap junctions,B.06. Synaptic Transmission,1.081656223,1.564351435
+1.081656223,-0.795510821,255,0,255,5,B.06.d. Modulation: Peptides and amines,B.06. Synaptic Transmission,1.081656223,1.564351435
+-0.776671727,0.66848865,255,0,255,5,"B.06.e. Modulation: ACh, amino acids and GABA",B.06. Synaptic Transmission,1.081656223,1.564351435
+-0.525619629,-0.064351435,255,0,255,5,B.06.f. Modulation: Mechanisms of action,B.06. Synaptic Transmission,1.081656223,1.564351435
+-1.212470663,0.261092381,255,0,255,5,B.06.g. Modulation: Pharmacology,B.06. Synaptic Transmission,1.081656223,1.564351435
+0.754358764,0.263985369,255,0,255,5,B.07.a. Short-term plasticity,B.07. Synaptic Plasticity,2.767807718,2.763985369
+2.107360602,1.47375338,255,0,255,5,B.07.b. LTP: Kinases and intracellular signaling,B.07. Synaptic Plasticity,2.767807718,2.763985369
+2.569580652,0.838381976,255,0,255,6,B.07.c. LTP: Pre- and Postsynaptic mechanisms,B.07. Synaptic Plasticity,2.767807718,2.763985369
+4.082172323,0.356881838,255,0,255,5,B.07.d. Long-term depression (LTD),B.07. Synaptic Plasticity,2.767807718,2.763985369
+2.845805006,-1.551759461,255,0,255,5,B.07.e. Spike-timing dependent plasticity,B.07. Synaptic Plasticity,2.767807718,2.763985369
+3.84470367,-0.448338096,255,0,255,8,B.07.f. Homeostatic plasticity,B.07. Synaptic Plasticity,2.767807718,2.763985369
+2.767807718,0.054124962,255,0,255,10,B.07.g. Structural plasticity,B.07. Synaptic Plasticity,2.767807718,2.763985369
+3.420072997,1.895476317,255,0,255,5,B.07.h. Transcription and translation in plasticity,B.07. Synaptic Plasticity,2.767807718,2.763985369
+1.67955862,-0.258083593,255,0,255,6,B.07.i. Other,B.07. Synaptic Plasticity,2.767807718,2.763985369
+1.860342139,-2.812486286,255,0,255,5,"B.08.a. Neural oscillators, dendritic properties and plasticity",B.08. Intrinsic Membrane Properties,1.427210944,-2.013200182
+0.994079749,-3.013914079,255,0,255,7,B.08.b. Modulation of neuronal firing properties,B.08. Intrinsic Membrane Properties,1.427210944,-2.013200182
+6.215268509,-4.521968663,255,0,255,5,B.09.a. Signal propagation,B.09. Network interactions,7.190405615,-3.54677606
+7.190405615,-4.799434021,255,0,255,5,B.09.b. Oscillations and synchrony: Unit studies,B.09. Network interactions,7.190405615,-3.54677606
+8.198880292,-4.872566673,255,0,255,9,B.09.c. Oscillations and synchrony: EEG studies,B.09. Network interactions,7.190405615,-3.54677606
+7.766599851,-4.84677606,255,0,255,9,B.09.d. Oscillations and synchrony: LFP studies,B.09. Network interactions,7.190405615,-3.54677606
+6.534685727,-4.886480478,255,0,255,6,B.09.e. Network interactions: Other,B.09. Network interactions,7.190405615,-3.54677606
+-6.496614144,-1.690977014,255,0,255,5,B.10.a. Genetics,B.10. Epilepsy,-7.086096342,0.690977014
+-4.937078232,-0.570612838,255,0,255,5,B.10.b. Channels,B.10. Epilepsy,-7.086096342,0.690977014
+-6.77216756,-2.347134163,255,0,255,5,B.10.c. Synaptic mechanisms,B.10. Epilepsy,-7.086096342,0.690977014
+-7.669391701,-2.515875037,255,0,255,5,B.10.d. Networks,B.10. Epilepsy,-7.086096342,0.690977014
+-7.086096342,-1.995629239,255,0,255,5,B.10.e. Post-seizure modifications,B.10. Epilepsy,-7.086096342,0.690977014
+-7.489493229,-1.916348512,255,0,255,5,B.10.f. In vivo and behavior,B.10. Epilepsy,-7.086096342,0.690977014
+-6.981577787,-1.01473495,255,0,255,9,B.10.g. Animal Models,B.10. Epilepsy,-7.086096342,0.690977014
+-7.485674175,-0.95932629,255,0,255,6,B.10.h. Anticonvulsant and antiepileptic therapies,B.10. Epilepsy,-7.086096342,0.690977014
+-8.155737839,-1.367511269,255,0,255,5,B.10.i. Human Studies,B.10. Epilepsy,-7.086096342,0.690977014
+-18.49688025,3.866991357,255,0,255,9,B.11.a. Astrocytes: Biology,B.11. Glial Mechanisms,-18.08980303,5.932714325
+-18.3397943,3.173592729,255,0,255,10,B.11.b. Astrocytes: Disease mechanisms,B.11. Glial Mechanisms,-18.08980303,5.932714325
+-18.77205401,1.702434032,255,0,255,6,B.11.c. Microglia: Biology,B.11. Glial Mechanisms,-18.08980303,5.932714325
+-18.82262873,1.607134999,255,0,255,11,B.11.d. Microglia: Disease mechanisms,B.11. Glial Mechanisms,-18.08980303,5.932714325
+-16.03585329,3.949523499,255,0,255,5,B.11.e. Oligodendrocytes,B.11. Glial Mechanisms,-18.08980303,5.932714325
+-17.83981176,4.124976589,255,0,255,14,B.11.f. Glia-neuron interactions: CNS,B.11. Glial Mechanisms,-18.08980303,5.932714325
+-12.82625884,3.077932152,255,0,255,5,B.11.g. Glia-neuron interactions: PNS,B.11. Glial Mechanisms,-18.08980303,5.932714325
+-17.05808324,3.49183592,255,0,255,5,B.11.h. Glia-neuronal interaction in energy homeostasis,B.11. Glial Mechanisms,-18.08980303,5.932714325
+-15.28362885,2.829303935,255,0,255,5,B.12.a. Molecular and cellular mechanisms,B.12. Demyelinating Disorders,-15.29823962,3.829303935
+-15.72307505,2.690200611,255,0,255,5,B.12.b. Therapeutics,B.12. Demyelinating Disorders,-15.29823962,3.829303935
+-15.29823962,2.952994265,255,0,255,5,B.12.c. Human and animal studies,B.12. Demyelinating Disorders,-15.29823962,3.829303935
+-15.08542339,0.885760879,255,0,255,5,B.13.a. Neuro-oncology,B.13. Neuro-Oncology,-15.08542339,1.585760879
 -23.06452175,-5.998292554,0,179,179,7,C.01.a. Molecular mechanisms,C.01. Brain Wellness and Aging,-22.88806675,-6.414154328
 -22.3913332,-6.186926101,0,179,179,8,"C.01.b. Metabolism, oxidative stress, and cellular mechanisms",C.01. Brain Wellness and Aging,-22.88806675,-6.414154328
 -23.83286511,-6.414154328,0,179,179,5,C.01.c. Pharmacological and non-pharmacological interventions,C.01. Brain Wellness and Aging,-22.88806675,-6.414154328
