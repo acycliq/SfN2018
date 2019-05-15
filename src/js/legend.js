@@ -7,8 +7,6 @@ var color,
     group_id = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I' ]
 
 function legend(idx, legendWidth, legendHeight) {
-    // id: "#legend_A"
-    var legendData = [];
 
     var legendColor = colorConfig.filter(d => d.label.startsWith(group_id[idx]))
 
@@ -123,38 +121,6 @@ function resetClick() {
         .on("mouseover", mouseover())
         .on("mouseout", mouseout());
 
-    d3.select("#legend_B").selectAll(".legendSquare")
-        .on("mouseover", mouseover())
-        .on("mouseout", mouseout());
-
-    d3.select("#legend_C").selectAll(".legendSquare")
-        .on("mouseover", mouseover())
-        .on("mouseout", mouseout());
-
-    d3.select("#legend_D").selectAll(".legendSquare")
-        .on("mouseover", mouseover())
-        .on("mouseout", mouseout());
-
-    d3.select("#legend_E").selectAll(".legendSquare")
-        .on("mouseover", mouseover())
-        .on("mouseout", mouseout());
-
-    d3.select("#legend_F").selectAll(".legendSquare")
-        .on("mouseover", mouseover())
-        .on("mouseout", mouseout());
-
-    d3.select("#legend_G").selectAll(".legendSquare")
-        .on("mouseover", mouseover())
-        .on("mouseout", mouseout());
-
-    d3.select("#legend_H").selectAll(".legendSquare")
-        .on("mouseover", mouseover())
-        .on("mouseout", mouseout());
-
-    d3.select("#legend_I").selectAll(".legendSquare")
-        .on("mouseover", mouseover())
-        .on("mouseout", mouseout());
-
     //Show all circles
     dotsGroup.selectAll(".dotOnScatter")
         .style("opacity", opacityOn)
@@ -170,9 +136,6 @@ function resetClick() {
 }//resetClick
 
 
-///////////////////////////////////////////////////////////////////////////
-//////////////////// Hover function for the legend ////////////////////////
-///////////////////////////////////////////////////////////////////////////
 
 function mouseover() {
     return function (d, i) {
@@ -240,5 +203,5 @@ function mouseout() {
             .style("opacity", opacityOn);
 
     };
-}//function selectLegend
+}//function mouseout
 
