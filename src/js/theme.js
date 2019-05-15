@@ -99,6 +99,11 @@ function onMouseOver() {
             .attr('r', d => d.radius * 1.5)
             .style("opacity", opacityOn);
 
+        // hide the topic labels
+        dotsGroup.selectAll(".topicLabel")
+        .transition()
+        .style("opacity", 0.0);
+
          legend(i, 300, 260)
 
         // groupLabelHandler(chosen)
