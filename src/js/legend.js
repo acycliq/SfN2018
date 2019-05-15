@@ -117,9 +117,9 @@ function clickLegend(d, i) {
 function resetClick() {
 
     //Activate the mouse over and mouse out events of the legend
-    d3.select("#theme_div").selectAll(".legendSquare")
-        .on("mouseover", mouseover())
-        .on("mouseout", mouseout());
+    d3.select("#theme_div").selectAll(".themeSquare")
+        .on("mouseover", onMouseOver())
+        .on("mouseout", onMouseOut());
 
     //Show all circles
     dotsGroup.selectAll(".dotOnScatter")
