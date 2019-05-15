@@ -161,6 +161,9 @@ function resetClick() {
         .style('stroke-width', 0)
         .style("visibility", "visible");
 
+    // Hide the labels
+    hideLabels()
+
 }//resetClick
 
 

@@ -42,7 +42,7 @@ function themes(div_id, group_id, themeWidth, themeHeight) {
         })
         .style("cursor", "pointer")
         .on("mouseover", onMouseOver())
-        .on("mouseout", mouseout())
+        .on("mouseout", onMouseOut)
         .on("click", onClick())
 
     //Non visible white rectangle behind square and text for better hover
@@ -100,11 +100,9 @@ function onMouseOver() {
             .style("opacity", opacityOn);
 
         // hide the topic labels
-        dotsGroup.selectAll(".topicLabel")
-        .transition()
-        .style("opacity", 0.0);
+        hideLabels()
 
-         legend(i, 300, 260)
+        legend(i, 300, 260)
 
         // groupLabelHandler(chosen)
 
@@ -143,9 +141,20 @@ function onClick() {
             .attr('r', d => d.radius * 1.5)
             .style("opacity", opacityOn);
 
+        // hide the topic labels
+        dotsGroup.selectAll(".topicLabel")
+        .transition()
+        .style("opacity", 0.0);
+
          legend(i, 300, 260)
 
         // groupLabelHandler(chosen)
 
     };
+}
+
+
+function onMouseOut() {
+    console.log('Exiting themes....removing the topics')
+    d3.select('#my_legend').select('svg').selectAll("*").remove();
 }
