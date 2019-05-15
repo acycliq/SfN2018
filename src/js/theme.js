@@ -42,7 +42,7 @@ function themes(div_id, group_id, themeWidth, themeHeight) {
         })
         .style("cursor", "pointer")
         .on("mouseover", onMouseOver())
-        .on("mouseout", onMouseOut)
+        .on("mouseout", onMouseOut())
         .on("click", onClick())
 
     //Non visible white rectangle behind square and text for better hover
@@ -155,6 +155,18 @@ function onClick() {
 
 
 function onMouseOut() {
-    console.log('Exiting themes....removing the topics')
-    d3.select('#topic_div').select('svg').selectAll("*").remove();
+    return function(d, i) {
+        console.log('Exiting themes....removing the topics')
+        d3.select('#topic_div').select('svg').selectAll("*").remove();
+        hideLabels()
+        dotsGroup.selectAll(".dotOnScatter")
+            .transition()
+            .style('stroke', 'black')
+            .style("stroke-width", 0)
+            .attr('r', d => d.radius)
+            .style("opacity", opacityOn);
+
+    };
 }
+
+
