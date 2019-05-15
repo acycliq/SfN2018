@@ -30,14 +30,13 @@ function legend(idx, legendWidth, legendHeight) {
         .attr("transform", "translate(" + legendMargin.left + "," + legendMargin.top + ")");
 
     legendWrapper.append('text')
-        .attr('class', 'div_header')
         .attr("transform", "translate(3, -9)")
         .style("font-size", "12px")
         .style("margin-left", "5px")
         .style("margin-top", "5px")
         .style("fill", "rgb(125, 125, 125)")
         .style("font-weight", "bold")
-        .text('Topic')
+        .text('Topics')
 
     var rectSize = 15, //dimensions of the colored square
         rowHeight = 20, //height of a row in the legend
