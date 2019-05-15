@@ -186,8 +186,11 @@ function topicLabelHandler(chosen) {
         .filter(function (d) {
             return d.label === chosen;
         })
+        .filter(function (d, i) {
+            return i === 0; // thats a trick to avoid having the same label (from different circles) stacking up one to each other.
+        })
         .transition()
-        .style("opacity", opacityOn);
+        .style("opacity", 1.0);
 }
 
 
