@@ -257,13 +257,13 @@ function clusterChart(data) {
 
     update.enter()
             .append("text")
-            .attr('class', 'groupLabel')
+            .attr('class', 'topicLabel')
             .attr("x", d => sectionFeatures.scale.x(+d.gx))
             .attr("y", d => sectionFeatures.scale.y(+d.gy)) //set your y attribute here
             .style("text-anchor", "middle")
             .style("font-size", "12px")
             .style('fill',  d => d3.rgb(d.r, d.g, d.b))
-            .attr('opacity', opacityOn)
+            .attr('opacity', 0)
             .text(d => d.group);
 
     // Note: Setting the transition here messes up the landing cell
@@ -381,14 +381,6 @@ function clusterChart(data) {
     }, Object.create(null));
 
     themes("#legend_A", 'A', 300, 230)
-    // legend("#legend_B", 'B', 300, 260)
-    // legend("#legend_C", 'C', 280, 220)
-    // legend("#legend_D", 'D', 280, 180)
-    // legend("#legend_E", 'E', 280, 180)
-    // legend("#legend_F", 'F', 280, 200)
-    // legend("#legend_G", 'G', 280, 200)
-    // legend("#legend_H", 'H', 280, 200)
-    // legend("#legend_I", 'I', 280, 150)
 
 
 
