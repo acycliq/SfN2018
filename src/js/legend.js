@@ -17,13 +17,9 @@ function legend(idx, legendWidth, legendHeight) {
         .range(legendColor.map(a => a.hex))
         .domain(legendColor.map(a => a.label))
 
-    // legendData.color = color;
-    // legendData.group_id = group_id;
 
     //Legend
     var legendMargin = {left: 5, top: 10, right: 5, bottom: 10};
-        // legendWidth = 310;
-        // legendHeight = 270;
 
     // clear svg from its contents
     d3.select('#my_legend').select('svg').selectAll("*").remove();
