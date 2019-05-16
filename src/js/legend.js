@@ -3,33 +3,40 @@
 ///////////////////////////////////////////////////////////////////////////
 var color,
     opacityOn = 0.8,
-    opacityOff = 0.2;
+    opacityOff = 0.2,
+    group_id = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I' ]
 
-function legend(div_id, group_id, legendWidth, legendHeight) {
-    // id: "#legend_A"
-    var legendData = [];
+function legend(idx, legendWidth, legendHeight) {
 
-    var legendColor = colorConfig.filter(d => d.label.startsWith(group_id))
+    var legendColor = colorConfig.filter(d => d.label.startsWith(group_id[idx]))
 
     // set the color
     color = d3.scaleOrdinal()
         .range(legendColor.map(a => a.hex))
         .domain(legendColor.map(a => a.label))
 
-    legendData.color = color;
-    legendData.group_id = group_id;
 
     //Legend
-    var legendMargin = {left: 5, top: 10, right: 5, bottom: 10};
-        // legendWidth = 310;
-        // legendHeight = 270;
+    var legendMargin = {left: 5, top: 20, right: 5, bottom: 10};
 
-    var svgLegend = d3.select(div_id).append("svg")
+    // clear svg from its contents
+    d3.select('#topic_div').select('svg').selectAll("*").remove();
+
+    var svgLegend = d3.select('#topic_div').select("svg")
         .attr("width", (legendWidth + legendMargin.left + legendMargin.right))
         .attr("height", (legendHeight + legendMargin.top + legendMargin.bottom));
 
     var legendWrapper = svgLegend.append("g").attr("class", "legendWrapper")
         .attr("transform", "translate(" + legendMargin.left + "," + legendMargin.top + ")");
+
+    legendWrapper.append('text')
+        .attr("transform", "translate(3, -9)")
+        .style("font-size", "12px")
+        .style("margin-left", "5px")
+        .style("margin-top", "5px")
+        .style("fill", "rgb(125, 125, 125)")
+        .style("font-weight", "bold")
+        .text('Topics')
 
     var rectSize = 15, //dimensions of the colored square
         rowHeight = 20, //height of a row in the legend
@@ -46,8 +53,7 @@ function legend(div_id, group_id, legendWidth, legendHeight) {
         .style("cursor", "pointer")
         .on("mouseover", mouseover())
         .on("mouseout", mouseout())
-        .on("click", clickLegend)
-        .on("dblclick", dblclickLegend);
+        .on("click", clickLegend);
 
     //Non visible white rectangle behind square and text for better hover
     legend.append('rect')
@@ -75,8 +81,10 @@ function legend(div_id, group_id, legendWidth, legendHeight) {
     d3.select("body").on("click", resetClick);
 
 
-    return legendData
+    // return legendData
 }
+
+
 
 // I think I will make dotsGroup global var
 function clickLegend(d, i) {
@@ -110,89 +118,17 @@ function clickLegend(d, i) {
             else return opacityOn;
         });
 
-    groupLabelHandler(chosen)
+    topicLabelHandler(chosen)
 }
 
-function dblclickLegend(d, i){
-    console.log('Double clicked!')
-    event.stopPropagation();
-
-    //deactivate the mouse over and mouse out events
-    d3.selectAll(".legendSquare")
-        .on("mouseover", null)
-        .on("mouseout", null);
-
-    dotsGroup.selectAll(".dotOnScatter")
-        .style("opacity", opacityOn)
-        .style("visibility", function (el) {
-            if (el.hex != d) return "hidden";
-            else return "visible";
-        });
-
-}
-
-function headerClick(hex){
-    console.log('header was clicked');
-    event.stopPropagation();
-
-    //deactivate the mouse over and mouse out events
-    d3.selectAll(".legendSquare")
-        .on("mouseover", null)
-        .on("mouseout", null);
-
-    dotsGroup.selectAll(".dotOnScatter")
-        .style('stroke', 'black')
-        .style("stroke-width", function (d) {
-            if (d.hex != hex) return 0;
-            else return 2;
-        })
-        .style("opacity", function (d) {
-            if (d.hex != hex) return opacityOff;
-            else return opacityOn;
-        });
-
-    groupLabelHandler('dummy')
-}
 
 //Show all the cirkels again when clicked outside legend
 function resetClick() {
 
     //Activate the mouse over and mouse out events of the legend
-    d3.select("#legend_A").selectAll(".legendSquare")
-        .on("mouseover", mouseover())
-        .on("mouseout", mouseout());
-
-    d3.select("#legend_B").selectAll(".legendSquare")
-        .on("mouseover", mouseover())
-        .on("mouseout", mouseout());
-
-    d3.select("#legend_C").selectAll(".legendSquare")
-        .on("mouseover", mouseover())
-        .on("mouseout", mouseout());
-
-    d3.select("#legend_D").selectAll(".legendSquare")
-        .on("mouseover", mouseover())
-        .on("mouseout", mouseout());
-
-    d3.select("#legend_E").selectAll(".legendSquare")
-        .on("mouseover", mouseover())
-        .on("mouseout", mouseout());
-
-    d3.select("#legend_F").selectAll(".legendSquare")
-        .on("mouseover", mouseover())
-        .on("mouseout", mouseout());
-
-    d3.select("#legend_G").selectAll(".legendSquare")
-        .on("mouseover", mouseover())
-        .on("mouseout", mouseout());
-
-    d3.select("#legend_H").selectAll(".legendSquare")
-        .on("mouseover", mouseover())
-        .on("mouseout", mouseout());
-
-    d3.select("#legend_I").selectAll(".legendSquare")
-        .on("mouseover", mouseover())
-        .on("mouseout", mouseout());
+    d3.select("#theme_div").selectAll(".themeSquare")
+        .on("mouseover", onMouseOver())
+        .on("mouseout", onMouseOut());
 
     //Show all circles
     dotsGroup.selectAll(".dotOnScatter")
@@ -200,45 +136,14 @@ function resetClick() {
         .style('stroke-width', 0)
         .style("visibility", "visible");
 
+    // Hide the labels
+    hideLabels()
+
+    // clear svg from its contents
+    d3.select('#topic_div').select('svg').selectAll("*").remove();
+
 }//resetClick
 
-
-///////////////////////////////////////////////////////////////////////////
-//////////////////// Hover function for the legend ////////////////////////
-///////////////////////////////////////////////////////////////////////////
-
-//Decrease opacity of non selected circles when hovering in the legend
-function selectLegend(opacity) {
-    var chosen;
-    return function (d, i) {
-        console.log(d)
-        var legendColor = colorConfig.filter(el => el.hex === d)
-        // set the color
-        var color = d3.scaleOrdinal()
-            .range(legendColor.map(a => a.hex))
-            .domain(legendColor.map(a => a.label))
-
-        chosen = color.domain()[i];
-
-        dotsGroup.selectAll(".dotOnScatter")
-            .filter(function (d) {
-                return d.label != chosen;
-            })
-            .transition()
-            .attr('r', d => d.radius)
-            .style("opacity", opacity);
-
-        dotsGroup.selectAll(".dotOnScatter")
-            .filter(function (d) {
-                return d.label === chosen;
-            })
-            .transition()
-            .attr('r', d => d.radius)
-            .style("opacity", opacityOn);
-
-        // pulseMe(chosen)
-    };
-}//function selectLegend
 
 
 function mouseover() {
@@ -272,38 +177,43 @@ function mouseover() {
             .attr('r', d => d.radius * 1.5)
             .style("opacity", opacityOn);
 
-        groupLabelHandler(chosen)
+        topicLabelHandler(chosen)
 
     };
 }//function mouseover
 
 
-function groupLabelHandler(chosen) {
-    dotsGroup.selectAll(".groupLabel")
+function topicLabelHandler(chosen) {
+    dotsGroup.selectAll(".topicLabel")
         .filter(function (d) {
             return d.label != chosen;
         })
         .transition()
         .style("opacity", 0.0);
 
-    dotsGroup.selectAll(".groupLabel")
+    dotsGroup.selectAll(".topicLabel")
         .filter(function (d) {
             return d.label === chosen;
         })
+        .filter(function (d, i) {
+            return i === 0; // thats a trick to avoid having the same label (from different circles) stacking up one to each other.
+        })
         .transition()
-        .style("opacity", opacityOn);
+        .style("opacity", 1.0);
 }
 
 
 function mouseout() {
     return function (d, i) {
+        console.log('in mouse out')
+        hideLabels()
         dotsGroup.selectAll(".dotOnScatter")
             .transition()
             .style('stroke', 'black')
-            .attr("stroke-width", 0)
+            .style("stroke-width", 0)
             .attr('r', d => d.radius)
             .style("opacity", opacityOn);
 
     };
-}//function selectLegend
+}//function mouseout
 

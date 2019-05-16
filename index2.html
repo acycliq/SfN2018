@@ -1,44 +1,272 @@
-<!-- <!DOCTYPE html> -->
-<meta charset="utf-8">
+<!DOCTYPE html>
+<html>
+
 <head>
-    <title>Force layout (x axis)</title>
+    <meta charset='utf-8'>
+
+    <title>Neuro Structure</title>
+
+    <meta name="description" content="A d3.js dashboard for data visualisation">
+
+    <!--jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+    <script src="lib/js/bootstrap.min.js"></script>
+
+    <!-- keen.io -->
+    <link rel="stylesheet" href="lib/css/keen-dashboards.css">
+    <script src="lib/js/keen.min.js"></script>
+
+    <!--d3 -->
+    <script src='https://d3js.org/d3.v4.min.js'></script>
+    <!--<script src="lib/js/d3-delaunay.min.js"></script>-->
+
+    <!-- User scripts  -->
+    <script src='src/js/section.js'></script>
+    <script src='src/js/theme.js'></script>
+    <script src='src/js/legend.js'></script>
+    <script src='src/js/utils.js'></script>
+
+    <link rel="stylesheet" href="src/css/index.css">
+
+
 </head>
 
 <style>
-    circle {
-        fill: orange;
+    .box {
+        background-color: red;
+        width: 100px;
+        height: 100px;
     }
+
+    .box.red {
+      background-color: red;
+    }
+
+    .box.blue {
+      background-color: blue;
+    }
+
+    .box-wrapper {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .box-wrapper.top {
+        top: 0;
+    }
+
+    .box-wrapper.right {
+        right: 0;
+    }
+
+    .box-wrapper.left {
+        left: 0;
+    }
+
+    .box-wrapper.bottom {
+        bottom: 0
+    }
+
+    .x.axis {opacity: 0.0}
+    .y.axis {opacity: 0.0}
+    .grid {opacity: 0.0}
+
+
+    .legendSquare {
+        padding: 5px;
+        border: 1px solid green;
+        margin: 5px 0;
+        animation: fadein 0.5s;
+        -moz-animation: fadein 0.5s;
+        /* Firefox */
+        -webkit-animation: fadein 0.5s;
+        /* Safari and Chrome */
+        -o-animation: fadein 0.5s;
+        /* Opera */
+    }
+
+    @keyframes fadein {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @-moz-keyframes fadein {
+        /* Firefox */
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes fadein {
+        /* Safari and Chrome */
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @-o-keyframes fadein {
+        /* Opera */
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+
+    .div_header {
+        font-size: 12px;
+        margin-left: 5px;
+        margin-top: 5px;
+        color: rgb(125, 125, 125);
+        font-weight: bold;
+    }
+
+    .outlined {
+        color: red;
+        text-shadow: -1px -1px 0 #000,
+        0 -1px 0 #000,
+        1px -1px 0 #000,
+        1px 0 0 #000,
+        1px 1px 0 #000,
+        0 1px 0 #000,
+        -1px 1px 0 #000,
+        -1px 0 0 #000;
+    }
+
+
 </style>
 
-<body>
-<div id="content">
-    <svg width="1200" height="700">
-        <g></g>
-    </svg>
+<body class="application" id="body">
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-md">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h2 class="modal-title">Charting the Structure of Neuroscience</h2>
+            </div>
+            <div class="modal-body">
+
+                <p>
+                    This visualisation shows the itineraries of 8,329 attendees at the 2018 SfN meeting.
+                    Each dot represents a topic with size indicative of its popularity
+                </p>
+
+
+                <p>
+                Credits:
+                    <ul type="square">
+                        <li>Analysis and Data: Carandini, M. <a href="https://figshare.com/articles/Charting_the_Structure_of_Neuroscience/8061401/1" target="_blank">Charting the Structure of Neuroscience.</a> Figshare (2019).
+                        </li>
+                        <li>Web visualization: Dimitris Nicoloutsopoulos</li>
+                    </ul>
+                </p>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
-<script src="src/js/scatter.js"></script>
 
-<script>
+<!-- main page container, holding the nav tabs and content -->
+<div id="container">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">The Structure of Neuroscience</a>
+                </div>
 
-    d3.csv("./src/data/data.csv", function (nodes) {
-        nodes.forEach(function (d, i) {
-            d.xValue = +d.xValue;
-            d.yValue = +d.yValue;
-            d.r = +d.r;
-            d.g = +d.g;
-            d.b = +d.b;
-            d.radius = +d.radius;
-            d.gx = +d.gx;
-            d.gy = +d.gy;
-            d.dot_num = +i;
-        });
-        console.log('done')
-        scatter(nodes)
-    });
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a data-target="#myModal" data-toggle="modal" href="#myModal">About</a></li>
+                </ul>
+            </div><!--/.container-fluid -->
+        </div>
+    </div>
 
 
-</script>
+    <!-- Map -->
+    <div class="col-sm-12 container-fluid" id="map-content">
+        <div class="chart-wrapper">
+            <div class="chart-title">
+                Cluster Map
+            </div>
+            <div class="chart-stage">
+                <div id="mymap" style="width: 100%;">
+                    <svg></svg>
+                </div>
+                <div class="box-wrapper top left">
+                    <div>
+                        <div style="font-size: 12px; margin-left: 5px; margin-top: 5px; color: rgb(125, 125, 125); font-weight: bold;">Themes</div>
+                        <!--<div class="legendText" style="font-size: 11px; color: #BABABA;">click to select all subjects within a category</div>-->
+                        <div id="theme_div" style="margin-top:-8px;"></div>
+                        <div id="topic_div" style="margin-top:0px;">
+                            <svg></svg>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Map -->
+
+
+    <script>
+
+        d3.csv("./src/data/data.csv", function (data) {
+            data.forEach(function (d, i) {
+                d.x = +d.x;
+                d.y = +d.y;
+                d.r = +d.r;
+                d.g = +d.g;
+                d.b = +d.b;
+                d.radius = +d.radius;
+                d.dot_num = +i;
+                d.hex = rgbToHex(d.r, d.g, d.b);
+                d.label = d.group;
+            });
+            console.log('done')
+            clusterChart(data)
+        },);
+    </script>
+
+    <!--<hr>-->
+
+    <div id="footnote" style="margin-top:-3px;">
+        <p class="small text-muted" id="alignleft">University College London - <a href="http://www.ucl.ac.uk/cortexlab">Cortexlab</a>
+        </p>
+        <!--<p class="small text-muted" id="alignright">Best viewed with <img src="./dashboard/data/img/if_chrome_87865.png"-->
+        <!--class="chromeIcon" alt="Warning!"></p>-->
+    </div>
+
+
+</div>
+
 </body>
+
 </html>
