@@ -260,6 +260,7 @@ function clusterChart(data) {
             .attr('class', 'topicLabel')
             .attr("x", d => sectionFeatures.scale.x(+d.gx))
             .attr("y", d => sectionFeatures.scale.y(+d.gy)) //set your y attribute here
+            .attr("font-weight", "bold")
             .style("text-anchor", "middle")
             .style("font-size", "12px")
             .style('fill',  d => d3.rgb(d.r, d.g, d.b))
