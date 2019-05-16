@@ -167,16 +167,16 @@ x,y,r,g,b,radius,description,group,gx,gy
 -6.881254351,19.14173756,0,179,179,6,C.06.c. Motor neuron disease: Animal models,C.06. Neuromuscular Diseases,-6.881254351,21.09425116
 -6.840574469,19.58894736,0,179,179,5,C.06.d. Motor neuron disease: Therapeutics,C.06. Neuromuscular Diseases,-6.881254351,21.09425116
 -6.825792992,18.37172414,0,179,179,5,C.06.e. Other neuromuscular diseases,C.06. Neuromuscular Diseases,-6.881254351,21.09425116
--20.85989011,-0.700853187,0,179,179,7,C.07.a. Cellular stress and death mechanisms,"C.07. Neurotoxicity, Inflammation, and Neuroprotection",-20.56087537,0.389462094
--20.45846484,-1.679052731,0,179,179,9,C.07.b. Mechanisms of neurotoxicity,"C.07. Neurotoxicity, Inflammation, and Neuroprotection",-20.56087537,0.389462094
--21.69719688,-1.54202308,0,179,179,15,C.07.c. Mechanisms of neurodegeneration,"C.07. Neurotoxicity, Inflammation, and Neuroprotection",-20.56087537,0.389462094
--21.16833844,-2.378992358,0,179,179,14,C.07.d. Neuroprotective mechanisms: Preclinical,"C.07. Neurotoxicity, Inflammation, and Neuroprotection",-20.56087537,0.389462094
--22.05332113,-2.508330796,0,179,179,5,C.07.e. Neuroprotective mechanisms: Clinical,"C.07. Neurotoxicity, Inflammation, and Neuroprotection",-20.56087537,0.389462094
--19.88880612,-0.580045592,0,179,179,11,C.07.f.  Neuroinflammation: Microglia,"C.07. Neurotoxicity, Inflammation, and Neuroprotection",-20.56087537,0.389462094
--19.8825312,-1.088478401,0,179,179,5,C.07.g. Neuroinflammation: Beyond microglia,"C.07. Neurotoxicity, Inflammation, and Neuroprotection",-20.56087537,0.389462094
--20.66328589,-1.219779802,0,179,179,11,C.07.h. Neuroinflammation: Neurodegeneration,"C.07. Neurotoxicity, Inflammation, and Neuroprotection",-20.56087537,0.389462094
--19.88949129,-2.14522014,0,179,179,6,C.07.i.  Neuroinflammation: Animal models,"C.07. Neurotoxicity, Inflammation, and Neuroprotection",-20.56087537,0.389462094
--18.69247673,-1.772597305,0,179,179,5,C.07.j.  Neuroinflammation: HIV and infections,"C.07. Neurotoxicity, Inflammation, and Neuroprotection",-20.56087537,0.389462094
+-20.85989011,-0.700853187,0,179,179,7,C.07.a. Cellular stress and death mechanisms,"C.07. Neurotoxicity, Inflammation, and Neuroprotection",-20.56087537,0.889462094
+-20.45846484,-1.679052731,0,179,179,9,C.07.b. Mechanisms of neurotoxicity,"C.07. Neurotoxicity, Inflammation, and Neuroprotection",-20.56087537,0.889462094
+-21.69719688,-1.54202308,0,179,179,15,C.07.c. Mechanisms of neurodegeneration,"C.07. Neurotoxicity, Inflammation, and Neuroprotection",-20.56087537,0.889462094
+-21.16833844,-2.378992358,0,179,179,14,C.07.d. Neuroprotective mechanisms: Preclinical,"C.07. Neurotoxicity, Inflammation, and Neuroprotection",-20.56087537,0.889462094
+-22.05332113,-2.508330796,0,179,179,5,C.07.e. Neuroprotective mechanisms: Clinical,"C.07. Neurotoxicity, Inflammation, and Neuroprotection",-20.56087537,0.889462094
+-19.88880612,-0.580045592,0,179,179,11,C.07.f.  Neuroinflammation: Microglia,"C.07. Neurotoxicity, Inflammation, and Neuroprotection",-20.56087537,0.889462094
+-19.8825312,-1.088478401,0,179,179,5,C.07.g. Neuroinflammation: Beyond microglia,"C.07. Neurotoxicity, Inflammation, and Neuroprotection",-20.56087537,0.889462094
+-20.66328589,-1.219779802,0,179,179,11,C.07.h. Neuroinflammation: Neurodegeneration,"C.07. Neurotoxicity, Inflammation, and Neuroprotection",-20.56087537,0.889462094
+-19.88949129,-2.14522014,0,179,179,6,C.07.i.  Neuroinflammation: Animal models,"C.07. Neurotoxicity, Inflammation, and Neuroprotection",-20.56087537,0.889462094
+-18.69247673,-1.772597305,0,179,179,5,C.07.j.  Neuroinflammation: HIV and infections,"C.07. Neurotoxicity, Inflammation, and Neuroprotection",-20.56087537,0.889462094
 -15.1470009,-3.603920952,0,179,179,5,C.08.a. Molecular mechanisms,C.08. Ischemia,-14.77483962,-2.100757762
 -14.6780927,-3.335582132,0,179,179,5,C.08.b. Cellular mechanisms,C.08. Ischemia,-14.77483962,-2.100757762
 -14.8896091,-4.240835197,0,179,179,5,C.08.c. Ischemia: Perinatal,C.08. Ischemia,-14.77483962,-2.100757762
