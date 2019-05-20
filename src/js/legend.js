@@ -36,7 +36,7 @@ function legend(idx, legendWidth, legendHeight) {
         .style("margin-top", "5px")
         .style("fill", "rgb(125, 125, 125)")
         .style("font-weight", "bold")
-        .text('Topics')
+        .text('Subthemes')
 
     var rectSize = 15, //dimensions of the colored square
         rowHeight = 20, //height of a row in the legend
